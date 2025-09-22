@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/sign-in' element={<SignIn />}></Route>
-          <Route path='/logi-in' element={<LogIn />}></Route>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/' element={<SignIn />}></Route>
+          <Route path='/log-in' element={<LogIn />}></Route>
+          <Route path='/home' element={<Home />}></Route>
           <Route path='/quizzes' element={< Quizzes />}></Route>
           <Route path='/my-profile' element={<MyProfile />}></Route>
           <Route path='/single-question' element={< SingleQuestion />}></Route>
