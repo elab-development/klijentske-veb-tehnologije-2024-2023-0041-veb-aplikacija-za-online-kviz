@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+}
+
+#filter-container {
+    margin-bottom: 10px;
+}
+
+#list-of-quiz {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 130px;
+    row-gap: 40px;
+}
