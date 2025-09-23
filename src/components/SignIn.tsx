@@ -7,9 +7,11 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { User } from '../modules/User';
+import { useNavigate } from 'react-router-dom';
 
 
 export function SignIn() {
+    const navigate = useNavigate();
     const schema = yup.object().shape({
         username: yup.string().required("Username is required").min(3).max(10),
         email: yup.string().email("Email is not valid").required("Email is required"),
@@ -67,10 +69,10 @@ export function SignIn() {
             <form className='inputContainer' onSubmit={handleSubmit(onSubmit)} >
                 <div className='inputContainerTop'>SIGN-IN</div>
                 <div className='inputContainerMiddle'>
-                    <InputText type={InputType.Username} register={register} name="username" error={errors.username?.message} />
-                    <InputText type={InputType.Email} register={register} name="email" error={errors.email?.message} />
-                    <InputText type={InputType.Password} register={register} name="password" error={errors.password?.message} />
-                    <InputText type={InputType.RepeatPassword} register={register} name="repeatPassword" error={errors.repeatPassword?.message} />
+                    <InputText type={InputType.Username} handle={register} name="username" error={errors.username?.message} />
+                    <InputText type={InputType.Email} handle={register} name="email" error={errors.email?.message} />
+                    <InputText type={InputType.Password} handle={register} name="password" error={errors.password?.message} />
+                    <InputText type={InputType.RepeatPassword} handle={register} name="repeatPassword" error={errors.repeatPassword?.message} />
                 </div>
                 <div className='inputContainerBottom'>
                     <button type='submit' className='submitButton'>
@@ -78,9 +80,9 @@ export function SignIn() {
                     </button>
 
 
-                    <div className='TextForm'>If you already have an account <span className='clickTextForm'>log-in</span> </div>
+                    <div className='TextForm'>If you already have an account <span className='clickTextForm' onClick={() => { navigate('/log-in') }}>log-in</span> </div>
                 </div>
-            </form>
-        </div>
+            </form >
+        </div >
     );
 }

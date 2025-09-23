@@ -81,4 +81,34 @@ export class User implements dataUser {
 
         return status;
     }
+
+
+    getAllUsers(): dataUser[] {
+        const data = localStorage.getItem("arrayUsers");
+        if (data != null) {
+            let structuredData: dataUser[] = JSON.parse(data);
+            return structuredData
+        }
+        else {
+            return [];
+        }
+    }
+
+    checkCredentials(username: string, password: string): number {
+        let structuredData: dataUser[] = this.getAllUsers();
+        let returnVar: number = 0
+
+        if (structuredData.length === 0)
+            return returnVar
+
+        structuredData.forEach(user => {
+            if (user.username === username && user.password === password) {
+                returnVar = user.id
+
+            }
+
+        })
+
+        return returnVar
+    }
 }

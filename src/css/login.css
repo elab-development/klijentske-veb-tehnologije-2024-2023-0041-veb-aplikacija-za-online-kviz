@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+#inputContainerLogin {
+    width: 33%;
+    height: 55%;
+    border: 5px solid #25357B;
+    position: relative;
+    bottom: 5%;
+    background-image: linear-gradient(to bottom,
+            #FEFEFE,
+            #6F6F6F 100%);
+    border-radius: 20px;
+    filter: drop-shadow(30px 4px 4px rgba(0, 0, 0, 25%));
+    display: flex;
+    flex-direction: column;
+}
+
+#logoLogIn {
+    height: 20%;
+    width: 8%;
+    position: relative;
+    bottom: 3%;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Kings&family=Kite+One&display=swap');
+
+#inputContainerTopLogin {
+    font-family: "Kings", cursive;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    color: #257B52;
+    letter-spacing: 10px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+
+#inputContainerMiddleLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    height: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.inputText {
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+.inputText-label {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.inputText-line {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 4px solid #25357B;
+    height: 50%;
+    width: 100%;
+    font-size: 20px;
+}
+
+#inputContainerBottomLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 8%;
+
+}
+
+
+#rightArrowLogin {
+    height: 48px;
+    width: 48px;
+
+}
+
+#TextFormLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Khand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+#clickTextFormLogin {
+    margin-left: 5px;
+    font-family: "Khand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+    color: #257B52;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.errorContainer {
+    font-weight: bold;
+
+    height: 35%;
+    display: flex;
+    align-items: center;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#submitButtonLogin {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#logInPage {
+    background-image: linear-gradient(to right,
+            #47E99B,
+            #257B52 32%,
+            #25357B 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
