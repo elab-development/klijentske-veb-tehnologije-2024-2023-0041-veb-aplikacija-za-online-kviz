@@ -20,7 +20,7 @@ export function InputText(props: Props) {
     return (
         <div className="inputText">
             <div className='inputText-label'>{props.type}</div>
-            <input type="text" className='inputText-line' {...props.register(props.name)} />
+            <input type={(props.name === 'password' || props.name === 'repeatPassword') ? "password" : "text"} className='inputText-line' {...props.register(props.name)} />
             <div className='errorContainer'>{props.error}</div>
         </div>
     );

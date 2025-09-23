@@ -6,6 +6,7 @@ import rightArrow from '../img/arrow-right.png'
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { User } from '../modules/User';
 
 
 export function SignIn() {
@@ -20,12 +21,44 @@ export function SignIn() {
         resolver: yupResolver(schema)
     });
 
-
+    interface dataOrg {
+        username: string;
+        email: string;
+        password: string;
+        repeatPassword: string;
+    }
 
 
     function onSubmit(data: object) {
+        let dataOrg: dataOrg = {
+            username: "default1",
+            email: "default1",
+            password: "default1",
+            repeatPassword: "default1"
+        };
+        let i: number = 0;
+        Object.keys(data).forEach(key => {
+            let value = data[key as keyof typeof data]
+            if (i == 0)
+                dataOrg.username = value
 
+            if (i == 1)
+                dataOrg.email = value
 
+            if (i == 2)
+                dataOrg.password = value
+
+            i++
+
+        })
+
+        let newUser: User = new User(dataOrg.username, dataOrg.email, dataOrg.password)
+        if (!newUser.addUser()) {
+            alert("Username or email already exists")
+            return
+        }
+
+        window.location.reload()
     }
 
     return (
