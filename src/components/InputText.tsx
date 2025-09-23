@@ -1,4 +1,3 @@
-import { couldStartTrivia } from 'typescript';
 import '../css/signin.css';
 
 export enum InputType {

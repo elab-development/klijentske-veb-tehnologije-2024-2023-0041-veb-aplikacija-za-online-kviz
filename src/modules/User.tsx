@@ -1,4 +1,4 @@
-interface dataUser {
+export interface dataUser {
     username: string;
     email: string;
     password: string;
@@ -94,21 +94,26 @@ export class User implements dataUser {
         }
     }
 
-    checkCredentials(username: string, password: string): number {
+    checkCredentials(username: string, password: string): dataUser {
         let structuredData: dataUser[] = this.getAllUsers();
-        let returnVar: number = 0
+        let returnObj: dataUser = {
+            username: "",
+            email: "",
+            password: "",
+            id: 0,
+        };
 
         if (structuredData.length === 0)
-            return returnVar
+            return returnObj
 
         structuredData.forEach(user => {
             if (user.username === username && user.password === password) {
-                returnVar = user.id
-
+                returnObj = user;
             }
 
         })
 
-        return returnVar
+        return returnObj;
     }
+
 }

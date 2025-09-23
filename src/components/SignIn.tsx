@@ -8,12 +8,21 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { User } from '../modules/User';
 import { useNavigate } from 'react-router-dom';
+import { dataUser } from '../modules/User';
+import { useEffect } from 'react';
 
 
 export function SignIn() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("currentUser") != null) {
+            navigate('/home')
+        }
+    })
+
     const schema = yup.object().shape({
-        username: yup.string().required("Username is required").min(3).max(10),
+        username: yup.string().required("Username is required").min(3).max(9),
         email: yup.string().email("Email is not valid").required("Email is required"),
         password: yup.string().min(5).max(15).required("Password is required"),
         repeatPassword: yup.string().oneOf([yup.ref("password")], "Passwords must be the same").required("Repeating the password is required")
@@ -60,7 +69,15 @@ export function SignIn() {
             return
         }
 
-        window.location.reload()
+        let currentUser: dataUser = {
+            username: newUser.username,
+            email: newUser.email,
+            password: newUser.password,
+            id: newUser.id,
+        }
+
+        localStorage.setItem("currentUser", JSON.stringify(currentUser))
+        navigate('/home')
     }
 
     return (

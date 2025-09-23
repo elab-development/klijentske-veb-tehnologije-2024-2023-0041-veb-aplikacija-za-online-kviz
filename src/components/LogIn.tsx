@@ -2,14 +2,23 @@ import '../css/login.css';
 import logo from '../img/logo.png'
 import { InputText } from './InputText';
 import rightArrow from '../img/arrow-right.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { InputType } from './InputText';
-import { User } from '../modules/User'
+import { User, dataUser } from '../modules/User'
 
 
 export function LogIn() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("currentUser") != null) {
+            navigate('/home')
+        }
+    })
+
+
+
     const [loginObject, setLoginObject] = useState<string[]>([]);
 
 
@@ -17,14 +26,15 @@ export function LogIn() {
         event.preventDefault();
         if (loginObject[0] && loginObject[1]) {
             let helpUser: User = new User("", "", "",);
-            let id = helpUser.checkCredentials(loginObject[0], loginObject[1])
+            let user: dataUser = helpUser.checkCredentials(loginObject[0], loginObject[1])
 
-            if (id === 0) {
+            if (user.id === 0) {
                 alert("U entered wrong username or password!")
                 return
             }
 
-            alert("You logged-in succesfully!")
+            localStorage.setItem("currentUser", JSON.stringify(user))
+            navigate('/home')
 
 
         }
