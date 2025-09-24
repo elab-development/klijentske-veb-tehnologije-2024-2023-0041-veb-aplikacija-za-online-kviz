@@ -5,8 +5,17 @@ export interface dataUser {
     id: number;
 }
 
+interface userMethods {
+    generateID(): number;
+    addToArray(arrayIN: dataUser[], user: dataUser): dataUser[];
+    addUser(): boolean;
+    userExist(): boolean;
+    getAllUsers(): dataUser[];
+    checkCredentials(username: string, password: string): dataUser;
+}
 
-export class User implements dataUser {
+
+export class User implements dataUser, userMethods {
     username: string;
     email: string;
     password: string;
