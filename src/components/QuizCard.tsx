@@ -1,18 +1,53 @@
 import '../css/quizCard.css'
-import napoleon from '../img/napoleon.jpg'
+import history from '../img/history.jpg'
+import geography from '../img/geography.jpg'
+import football from '../img/football.jpg'
+import tennis from '../img/tennis.jpeg'
+import basketball from '../img/basketball.png'
+import economics from '../img/economics.jpg'
+import defaultQuizIMG from '../img/default.jpg'
 import starFull from '../img/star-full.png'
 import starEmpty from '../img/star-empty.png'
 import { useNavigate } from 'react-router-dom'
 
-export function QuizCard() {
+type difficulty = 0 | 1 | 2 | 3 | 4 | 5
+
+export interface QuizObject {
+    title: string
+    difficulty: difficulty
+    description: string
+    group: string
+    id: number
+    image: string
+}
+
+interface QuziProps {
+    object: QuizObject
+}
+
+
+export function QuizCard(props: QuziProps) {
     let navigate = useNavigate();
-    let numberFull: number = 3;
+    let numberFull: number = props.object.difficulty;
+    let img;
+
+    switch (props.object.image) {
+        case "history.jpg": img = <img src={history} className='quizSourceIMG' />; break;
+        case "geography.jpg": img = <img src={geography} className='quizSourceIMG' />; break;
+        case "football.jpg": img = <img src={football} className='quizSourceIMG' />; break;
+        case "tennis.jpg": img = <img src={tennis} className='quizSourceIMG' />; break;
+        case "basketball.jpg": img = <img src={basketball} className='quizSourceIMG' />; break;
+        case "economics.jpg": img = <img src={economics} className='quizSourceIMG' />; break;
+        default: img = <img src={defaultQuizIMG} className='quizSourceIMG' />; break;
+    }
 
     return (
         <div className="single-quiz-card">
-            <div className='quiz-img'><img src={napoleon} className='quizSourceIMG' /></div>
+            <div className='quiz-img'>
+                {img}
+            </div>
             <div className='quiz-info'>
-                <div className='quiz-title' onClick={() => { navigate('/single-quiz') }}>HISTORY</div>
+                <div className='quiz-title' onClick={() => { navigate('/single-quiz') }}>{props.object.title}</div>
                 <div className='quiz-difficulty'>
                     {
                         [1, 2, 3, 4, 5].map(i => {
@@ -25,7 +60,7 @@ export function QuizCard() {
                         })
                     }
                 </div>
-                <div className='quiz-description'>This quiz is about  historical figures, wars, battles, myths, legends</div>
+                <div className='quiz-description'>{props.object.description}</div>
             </div>
         </div>
     );

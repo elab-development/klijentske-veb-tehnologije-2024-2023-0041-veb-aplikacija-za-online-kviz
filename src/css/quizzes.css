@@ -13,3 +13,11 @@ body {
     gap: 130px;
     row-gap: 40px;
 }
+
+#noQuiz {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
