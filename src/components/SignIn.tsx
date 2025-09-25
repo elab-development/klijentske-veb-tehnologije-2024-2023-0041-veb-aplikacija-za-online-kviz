@@ -11,6 +11,12 @@ import { useNavigate } from 'react-router-dom';
 import { dataUser } from '../modules/User';
 import { useEffect } from 'react';
 
+export interface dataOrg {
+    username: string;
+    email: string;
+    password: string;
+    repeatPassword?: string;
+}
 
 export function SignIn() {
     const navigate = useNavigate();
@@ -32,12 +38,7 @@ export function SignIn() {
         resolver: yupResolver(schema)
     });
 
-    interface dataOrg {
-        username: string;
-        email: string;
-        password: string;
-        repeatPassword: string;
-    }
+
 
 
     function onSubmit(data: object) {

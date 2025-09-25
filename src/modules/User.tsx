@@ -44,7 +44,7 @@ export class User implements dataUser, userMethods {
         let arrayLength: number
 
         if (data != null) {
-            let structuredData: dataUser[] = JSON.parse(data);
+            let structuredData: dataUser[] = JSON.parse(data || "[]");
             arrayLength = structuredData.length;
             return arrayLength + 1
         }
@@ -60,9 +60,7 @@ export class User implements dataUser, userMethods {
 
 
         let data = localStorage.getItem("arrayUsers");
-        let structuredData: dataUser[];
-
-        data != null ? structuredData = JSON.parse(data) : structuredData = []
+        let structuredData: dataUser[] = data ? JSON.parse(data) : [];
 
         if (!this.userExist()) {
             localStorage.setItem("arrayUsers", JSON.stringify(this.addToArray(structuredData, this.currentUserData)))
@@ -77,7 +75,7 @@ export class User implements dataUser, userMethods {
         let status: boolean = false;
         const data = localStorage.getItem("arrayUsers");
 
-        if (data != null) {
+        if (data) {
             let structuredData: dataUser[] = JSON.parse(data);
             structuredData.forEach(user => {
                 if (user.email === this.email || user.username === this.username) {
@@ -94,7 +92,7 @@ export class User implements dataUser, userMethods {
 
     getAllUsers(): dataUser[] {
         const data = localStorage.getItem("arrayUsers");
-        if (data != null) {
+        if (data) {
             let structuredData: dataUser[] = JSON.parse(data);
             return structuredData
         }

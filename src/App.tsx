@@ -11,6 +11,7 @@ import { MyStats } from './components/MyStats';
 import { Edit } from './components/Edit';
 
 function App() {
+
   return (
     <div className="App">
       <Router>

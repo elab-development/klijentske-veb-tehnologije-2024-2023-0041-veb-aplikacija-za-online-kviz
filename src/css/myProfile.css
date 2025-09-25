@@ -1,0 +1,67 @@
+#myProfileContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 83vh;
+}
+
+#profilePhotoContainer {
+    width: 190px;
+    height: 190px;
+    background-image: linear-gradient(to bottom, #25357B, #4360E1);
+    border: 5px solid #25357B;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#userPhoto {
+    width: 215px;
+    height: 215px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Kite+One&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+#changeProfilePhotoBtn {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    border: 5px solid #25357B;
+    padding: 7px;
+    background-image: linear-gradient(to right, white, #6F6F6F);
+    cursor: pointer;
+    margin-bottom: 15px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #25357B, #4360E1);
+    border-image-slice: 1;
+    ;
+}
+
+#profileInputContainer {
+    position: relative;
+    border: 5px solid #25357B;
+    background-image: linear-gradient(to right, white, #6F6F6F);
+    width: 456px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#imgSave {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#imgSAVEbtn {
+    background-color: transparent;
+    border: none;
+}

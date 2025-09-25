@@ -4,17 +4,22 @@ import { pageType } from '../components/Menu'
 import { dataUser } from '../modules/User';
 import arrowUpRight from '../img/arrow-up-right.png'
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Home() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     let currentUserJSON = localStorage.getItem("currentUser")
     let currentUser: dataUser;
+
 
     if (currentUserJSON != null) {
         currentUser = JSON.parse(currentUserJSON)
     }
-    else
+    else {
         return <div></div>
+
+    }
+
 
     return (
         <div>
