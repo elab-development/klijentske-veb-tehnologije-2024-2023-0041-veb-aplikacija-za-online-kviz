@@ -1,0 +1,23 @@
+.answer-option {
+    width: 380px;
+    height: 106px;
+    border: 5px solid #25357B;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+#answerOptionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answerOptionRow {
+    display: flex;
+    float: row;
+
+}

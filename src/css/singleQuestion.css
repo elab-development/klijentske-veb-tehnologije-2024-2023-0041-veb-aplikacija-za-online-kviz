@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Khand:wght@300;400;500;600;700&family=Kings&family=Kite+One&display=swap');
+
+#single-question-content {
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#topPart {
+    height: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 32px;
+
+}
+
+#topPart div {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#questionANDanswersContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    flex-direction: column;
+}
+
+#questionContainer {
+    width: 915px;
+    height: 200px;
+    background-color: #D9D9D9;
+    border: 5px solid #25357B;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+.currentQuestionText {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.currentQuestionNumber {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.nextArrow {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+
+#nextQuestion {
+    position: absolute;
+    top: 75vh;
+    left: 94vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#previousQuestion {
+    position: absolute;
+    top: 75vh;
+    left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
