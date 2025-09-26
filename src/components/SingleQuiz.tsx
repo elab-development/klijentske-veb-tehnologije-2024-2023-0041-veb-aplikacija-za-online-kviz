@@ -13,13 +13,15 @@ import starEmpty from '../img/star-empty.png'
 import { QuizObject } from './QuizCard'
 import { useNavigate } from "react-router-dom";
 
+export let currentQuiz: QuizObject;
+
 export function SingleQuiz() {
     let navigate = useNavigate()
-    let currentQuizID: number;
 
-    let currentQuizIDJSON: any = localStorage.getItem("currentQuiz")
-    if (currentQuizIDJSON != null) {
-        currentQuizID = JSON.parse(currentQuizIDJSON)
+
+    let currentQuizJSON: any = localStorage.getItem("currentQuiz")
+    if (currentQuizJSON != null) {
+        currentQuiz = JSON.parse(currentQuizJSON)
     }
     else
         return <div></div>
@@ -50,11 +52,12 @@ export function SingleQuiz() {
         group: "",
         id: 0,
         image: "",
-        time: 0
+        time: 0,
+        questionsID: []
     };
 
     quizObjects.forEach(quiz => {
-        if (quiz.id === currentQuizID) {
+        if (quiz.id === currentQuiz.id) {
             currentQuizData = quiz
         }
     });

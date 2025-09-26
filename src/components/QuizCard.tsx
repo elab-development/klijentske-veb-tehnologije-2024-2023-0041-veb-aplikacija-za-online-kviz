@@ -9,7 +9,7 @@ import defaultQuizIMG from '../img/default.jpg'
 import starFull from '../img/star-full.png'
 import starEmpty from '../img/star-empty.png'
 import { useNavigate } from 'react-router-dom'
-import { number } from 'yup'
+import { quizQuestion } from './SingleQuestion'
 
 
 type difficulty = 0 | 1 | 2 | 3 | 4 | 5
@@ -22,6 +22,7 @@ export interface QuizObject {
     id: number
     image: string
     time: number
+    questionsID: number[]
 }
 
 interface QuziProps {
@@ -44,8 +45,8 @@ export function QuizCard(props: QuziProps) {
         default: img = <img src={defaultQuizIMG} className='quizSourceIMG' />; break;
     }
 
-    function enterSingleQuiz(idQuiz: number) {
-        localStorage.setItem("currentQuiz", JSON.stringify(idQuiz))
+    function enterSingleQuiz(quiz: QuizObject) {
+        localStorage.setItem("currentQuiz", JSON.stringify(quiz))
         navigate('/single-quiz')
     }
 
@@ -55,7 +56,7 @@ export function QuizCard(props: QuziProps) {
                 {img}
             </div>
             <div className='quiz-info'>
-                <div className='quiz-title' onClick={() => enterSingleQuiz(props.object.id)}>{props.object.title}</div>
+                <div className='quiz-title' onClick={() => enterSingleQuiz(props.object)}>{props.object.title}</div>
                 <div className='quiz-difficulty'>
                     {
                         [1, 2, 3, 4, 5].map(i => {

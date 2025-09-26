@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+body {
+    overflow-y: hidden;
+}
+
 #topPart {
     height: 3%;
     display: flex;
