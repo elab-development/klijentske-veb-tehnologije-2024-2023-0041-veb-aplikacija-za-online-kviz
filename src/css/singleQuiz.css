@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Khand:wght@300;400;500;600;700&family=Kings&family=Kite+One&display=swap');
+
+#single-Quiz-page-container {
+    display: flex;
+    flex-direction: row;
+    height: 79vh;
+    padding: 15px 0px 0px 25px;
+
+}
+
+#single-Quiz-page-container-left {
+    width: 25%;
+}
+
+#single-Quiz-page-container-center {
+    width: 30%;
+    padding-top: 60px;
+}
+
+#single-Quiz-page-container-right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+}
+
+#quizTitle {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    margin-bottom: 2%;
+}
+
+.quizIMG {
+    width: 375px;
+    height: 475px;
+    border-radius: 10px;
+}
+
+#single-Quiz-page-container-center div {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+#single-Quiz-page-container-center div span {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#quizDescription {
+    font-size: 40px !important;
+    color: #1B3351;
+    font-weight: bold !important;
+    text-align: center;
+    position: relative;
+    right: 3%;
+}
+
+#myAttempts {
+    width: 418px;
+    height: 410px;
+    border: 5px solid black;
+    background-color: #D9D9D9;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+#myAttempts div,
+ul li {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+#myAttempts ul {
+    position: relative;
+    left: 30px;
+
+
+}
+
+#ulContainer {
+    height: 300px;
+}
+
+#li1 {
+    color: #E1561F;
+}
+
+#li2 {
+    color: #47E99B;
+}
+
+
+#li3 {
+    color: #34A16C;
+}
+
+#li4 {
+    color: #47E99B;
+}
+
+#li5 {
+    color: #34A16C;
+}
+
+#li6 {
+    color: #47E99B;
+}
+
+#btnStartQuiz {
+    width: 396px;
+    height: 90px;
+    background-color: black;
+
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.singleStar {
+    width: 30px;
+    height: 30px;
+}
+
+.difficultyContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#starsContainer {
+    margin-left: 2%;
+}
+
+.singleStar {
+    position: relative;
+    top: 5px;
+}
