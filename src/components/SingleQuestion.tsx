@@ -7,7 +7,10 @@ import arrowRight from "../img/arrow-right.png"
 import { option } from "./AnswerOption";
 import { QuizObject } from "./QuizCard";
 import { useState } from "react";
-
+import check from "../img/check.png";
+import xRed from "../img/x-red.png";
+import xBlack from "../img/x-black.png";
+import { useNavigate } from "react-router-dom";
 
 export interface quizQuestion {
     quizID: number;
@@ -22,6 +25,8 @@ export interface quizQuestion {
 
 
 export function SingleQuestion() {
+    const navigate = useNavigate()
+
     const [questionNumber, setQuestionNumber] = useState<number>(0)
     const [answers, setAnswers] = useState<string[]>([])
     const [controlFirst, setControlFirst] = useState<number>(0)
@@ -32,6 +37,11 @@ export function SingleQuestion() {
     const [selectedFieldC, setSelectedFieldC] = useState<boolean>(false)
     const [selectedFieldD, setSelectedFieldD] = useState<boolean>(false)
 
+    const [popUp, setPopUp] = useState<boolean>(false);
+
+    const [trueAN, setTrueAN] = useState<number>(0);
+    const [wrongAN, setWrongAN] = useState<number>(0);
+    const [score, setScore] = useState<number>(0);
 
 
     let currentQuiz: QuizObject;
@@ -100,8 +110,18 @@ export function SingleQuestion() {
 
 
         if (questionNumber + 1 == arrayCurrentQuizQuestions.length && clickedNextQuestion) {
-            alert("Quiz is finished!")
-
+            let userAnswers: string[] = answers
+            let trueAnswers: number = 0;
+            for (let i = 0; i < userAnswers.length; i++) {
+                if (userAnswers[i] === arrayCurrentQuizQuestions[i].correctAnswer)
+                    trueAnswers++;
+            }
+            let falseAnswers: number = userAnswers.length - trueAnswers
+            let percantageScore: number = (trueAnswers / userAnswers.length) * 100
+            setTrueAN(trueAnswers)
+            setWrongAN(falseAnswers)
+            setScore(percantageScore)
+            setPopUp(true)
             return
         }
 
@@ -145,6 +165,26 @@ export function SingleQuestion() {
                 <div className="currentQuestionNumber">{questionNumber + 1}/{currentQuiz.questionsID.length}</div>
                 <img className="nextArrow" src={arrowLeft} onClick={() => handleChangeQuestion(false)}></img>
                 <div className="currentQuestionText"> PAST</div>
+            </div>
+
+            <div id="resultsBackground" style={{ display: popUp ? "block" : "none" }}></div>
+            <div id="resultsContainer" style={{ display: popUp ? "flex" : "none" }}>
+                <div id="results-title">QUIZ IS FINISHED</div>
+                <div id="results-text">Your result is:</div>
+                <div id="results">
+                    <div className="result-single">
+                        <img src={check} className="result-single-img" />
+                        <div className="result-single-text">{trueAN}</div>
+                    </div>
+
+                    <div className="result-single">
+                        <img src={xRed} className="result-single-img" />
+                        <div className="result-single-text">{wrongAN}</div>
+                    </div>
+                </div>
+                <div id="results-peracantage">{score.toFixed(2)}%</div>
+                <div id="results-btn" onClick={() => navigate('/my-stats')}>SEE MY STATS</div>
+                <img src={xBlack} id="closePopUp" onClick={() => setPopUp(false)} />
             </div>
 
 
