@@ -12,11 +12,15 @@ import starFull from '../img/star-full.png'
 import starEmpty from '../img/star-empty.png'
 import { QuizObject } from './QuizCard'
 import { useNavigate } from "react-router-dom";
+import { SingleQuestion } from "./SingleQuestion";
+import { useRef } from "react";
 
 export let currentQuiz: QuizObject;
 
 export function SingleQuiz() {
+
     let navigate = useNavigate()
+    let currentQuizRef = useRef({})
 
 
     let currentQuizJSON: any = localStorage.getItem("currentQuiz")
@@ -59,6 +63,7 @@ export function SingleQuiz() {
     quizObjects.forEach(quiz => {
         if (quiz.id === currentQuiz.id) {
             currentQuizData = quiz
+            currentQuizRef.current = quiz
         }
     });
     let img;
@@ -124,7 +129,9 @@ export function SingleQuiz() {
                             <div>Average score: {"67,5%"}</div>
                         </div>
                     </div>
-                    <div id="btnStartQuiz" onClick={() => { navigate('/single-question') }}>START QUIZZ</div>
+                    <div id="btnStartQuiz" onClick={() => {
+                        navigate('/single-question')
+                    }}>START QUIZZ</div>
                 </div>
             </div>
         </div>

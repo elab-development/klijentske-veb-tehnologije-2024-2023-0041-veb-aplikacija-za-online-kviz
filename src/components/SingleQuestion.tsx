@@ -6,11 +6,13 @@ import arrowLeft from "../img/arrow-left.png"
 import arrowRight from "../img/arrow-right.png"
 import { option } from "./AnswerOption";
 import { QuizObject } from "./QuizCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import check from "../img/check.png";
 import xRed from "../img/x-red.png";
 import xBlack from "../img/x-black.png";
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
+import { stringifyTime } from "../modules/stringifyTime";
 
 export interface quizQuestion {
     quizID: number;
@@ -44,6 +46,52 @@ export function SingleQuestion() {
     const [score, setScore] = useState<number>(0);
 
 
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+    let initialCounter = 0;
+    const currentQuizDataJSON = localStorage.getItem("currentQuiz");
+    if (currentQuizDataJSON) {
+        const currentQuizData: QuizObject = JSON.parse(currentQuizDataJSON);
+        initialCounter = currentQuizData.time || 0;
+    }
+
+
+    const counterRef = useRef(initialCounter)
+
+    let stringifyTimeResult: string[] = stringifyTime(counterRef.current)
+    const [timer, setTimer] = useState<string>(stringifyTimeResult[0] + ":" + stringifyTimeResult[1])
+
+    useEffect(() => {
+
+        const intervalID = setInterval(() => {
+            intervalRef.current = intervalID
+            if (counterRef.current === 0) {
+                clearInterval(intervalID)
+                let userAnswers: string[] = answers
+                let trueAnswers: number = 0;
+                for (let i = 0; i < userAnswers.length; i++) {
+                    if (userAnswers[i] === arrayCurrentQuizQuestions[i].correctAnswer)
+                        trueAnswers++;
+                }
+                let falseAnswers: number = userAnswers.length - trueAnswers
+                let percantageScore: number = (trueAnswers / userAnswers.length) * 100
+                setTrueAN(trueAnswers)
+                setWrongAN(falseAnswers)
+                setScore(percantageScore)
+                setPopUp(true)
+                return
+            }
+
+            counterRef.current = counterRef.current - 1
+
+            let stringifyTimeResult: string[] = stringifyTime(counterRef.current)
+            setTimer(stringifyTimeResult[0] + ":" + stringifyTimeResult[1])
+
+
+        }, 1000)
+    }, [])
+
+
     let currentQuiz: QuizObject;
     let currentQuizJSON: any = localStorage.getItem("currentQuiz")
     if (currentQuizJSON != null) {
@@ -63,8 +111,11 @@ export function SingleQuestion() {
     if (questionsDataJSON != null) {
         qustionsData = JSON.parse(questionsDataJSON)
     }
-    else
+    else {
+
         return <div></div>
+    }
+
 
     let currentUserJSON = localStorage.getItem("currentUser")
     let currentUser: dataUser;
@@ -122,6 +173,8 @@ export function SingleQuestion() {
             setWrongAN(falseAnswers)
             setScore(percantageScore)
             setPopUp(true)
+            if (intervalRef.current)
+                clearInterval(intervalRef.current)
             return
         }
 
@@ -138,7 +191,7 @@ export function SingleQuestion() {
         <div>
             <Menu user={currentUser} page={pageType.Quizzes} />
             <div id="single-question-content">
-                <div id="topPart"><div>TOPIC OF QUIZ: {currentQuiz.title}</div> <div>Time left: 9:23</div></div>
+                <div id="topPart"><div>TOPIC OF QUIZ: {currentQuiz.title}</div> <div>Time left: {timer}</div></div>
                 <div id="questionANDanswersContainer">
                     <div id="questionContainer">{(questionNumber + 1) + ". " + arrayCurrentQuizQuestions[questionNumber].questionText}</div>
                     <div id="answerOptionsContainer">
@@ -184,7 +237,7 @@ export function SingleQuestion() {
                 </div>
                 <div id="results-peracantage">{score.toFixed(2)}%</div>
                 <div id="results-btn" onClick={() => navigate('/my-stats')}>SEE MY STATS</div>
-                <img src={xBlack} id="closePopUp" onClick={() => setPopUp(false)} />
+                <img src={xBlack} id="closePopUp" onClick={() => navigate('/single-quiz')} />
             </div>
 
 
