@@ -25,6 +25,14 @@ export interface quizQuestion {
     correctAnswer: option
 }
 
+export interface quizTry {
+    userID: number;
+    quizID: number;
+    score: number;
+    time: number;
+    date: string;
+}
+
 
 export function SingleQuestion() {
     const navigate = useNavigate()
@@ -47,6 +55,7 @@ export function SingleQuestion() {
 
 
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
+    const scoreRef = useRef<number>(0)
 
     let initialCounter = 0;
     const currentQuizDataJSON = localStorage.getItem("currentQuiz");
@@ -78,8 +87,36 @@ export function SingleQuestion() {
                 setTrueAN(trueAnswers)
                 setWrongAN(falseAnswers)
                 setScore(percantageScore)
+                scoreRef.current = percantageScore
                 setPopUp(true)
-                return
+
+
+
+                let date: Date = new Date()
+                let dateFormatted: string = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear()
+
+                let quizCurrentTry: quizTry = {
+                    userID: currentUser.id,
+                    quizID: currentQuiz.id,
+                    score: scoreRef.current,
+                    time: initialCounter - counterRef.current,
+                    date: dateFormatted,
+                }
+
+                let quizTriesArrayJSON: string = localStorage.getItem("quizTriesArray") || "";
+
+                if (quizTriesArrayJSON != "") {
+                    let quizTriesArray: quizTry[] = JSON.parse(quizTriesArrayJSON)
+                    quizTriesArray.push(quizCurrentTry)
+                    localStorage.setItem("quizTriesArray", JSON.stringify(quizTriesArray))
+                    return
+                }
+                else {
+                    let quizTriesArray: quizTry[] = []
+                    quizTriesArray.push(quizCurrentTry)
+                    localStorage.setItem("quizTriesArray", JSON.stringify(quizTriesArray))
+                    return
+                }
             }
 
             counterRef.current = counterRef.current - 1
@@ -172,10 +209,37 @@ export function SingleQuestion() {
             setTrueAN(trueAnswers)
             setWrongAN(falseAnswers)
             setScore(percantageScore)
+            scoreRef.current = percantageScore
             setPopUp(true)
             if (intervalRef.current)
                 clearInterval(intervalRef.current)
-            return
+
+
+            let date: Date = new Date()
+            let dateFormatted: string = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear()
+
+            let quizCurrentTry: quizTry = {
+                userID: currentUser.id,
+                quizID: currentQuiz.id,
+                score: scoreRef.current,
+                time: initialCounter - counterRef.current,
+                date: dateFormatted,
+            }
+
+            let quizTriesArrayJSON: string = localStorage.getItem("quizTriesArray") || "";
+
+            if (quizTriesArrayJSON != "") {
+                let quizTriesArray: quizTry[] = JSON.parse(quizTriesArrayJSON)
+                quizTriesArray.push(quizCurrentTry)
+                localStorage.setItem("quizTriesArray", JSON.stringify(quizTriesArray))
+                return
+            }
+            else {
+                let quizTriesArray: quizTry[] = []
+                quizTriesArray.push(quizCurrentTry)
+                localStorage.setItem("quizTriesArray", JSON.stringify(quizTriesArray))
+                return
+            }
         }
 
 

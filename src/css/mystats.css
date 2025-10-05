@@ -1,0 +1,12 @@
+#tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 78vh;
+}
+
+body {
+    overflow-y: auto;
+}
