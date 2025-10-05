@@ -80,7 +80,6 @@
     box-shadow: 15px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 #myAttempts div,
 ul li {
     font-family: "Kite One", sans-serif;
@@ -100,30 +99,6 @@ ul li {
     height: 300px;
 }
 
-#li1 {
-    color: #E1561F;
-}
-
-#li2 {
-    color: #47E99B;
-}
-
-
-#li3 {
-    color: #34A16C;
-}
-
-#li4 {
-    color: #47E99B;
-}
-
-#li5 {
-    color: #34A16C;
-}
-
-#li6 {
-    color: #47E99B;
-}
 
 #btnStartQuiz {
     width: 396px;

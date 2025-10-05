@@ -9,10 +9,10 @@ import defaultQuizIMG from '../img/default.jpg'
 import starFull from '../img/star-full.png'
 import starEmpty from '../img/star-empty.png'
 import { useNavigate } from 'react-router-dom'
-import { quizQuestion } from './SingleQuestion'
+import { quizTry } from './SingleQuestion'
 
 
-type difficulty = 0 | 1 | 2 | 3 | 4 | 5
+export type difficulty = 0 | 1 | 2 | 3 | 4 | 5
 
 export interface QuizObject {
     title: string
@@ -34,6 +34,7 @@ export function QuizCard(props: QuziProps) {
     let navigate = useNavigate();
     let numberFull: number = props.object.difficulty;
     let img;
+
 
     switch (props.object.image) {
         case "history.jpg": img = <img src={history} className='quizSourceIMG' />; break;

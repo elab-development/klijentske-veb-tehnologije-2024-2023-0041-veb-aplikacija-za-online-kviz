@@ -6,6 +6,9 @@ import '../css/quizzes.css'
 import { QuizObject } from './QuizCard'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { quizTry } from "./SingleQuestion";
+import { difficulty } from "./QuizCard";
+import { updateDifficulty } from "../modules/updateDifficulty";
 
 
 export function Quizzes() {
@@ -30,13 +33,15 @@ export function Quizzes() {
         })
     }
 
+
     useEffect(() => {
+
+
         if (quizData != null) {
             let structuredQuizData: QuizObject[] = JSON.parse(quizData);
-            setQuizCardData(structuredQuizData)
 
-
-
+            let updatedDifficultyData: QuizObject[] = updateDifficulty(structuredQuizData)
+            setQuizCardData(updatedDifficultyData)
         }
 
     }, [])
@@ -69,7 +74,8 @@ export function Quizzes() {
         if (comboBoxGroup === "Group" && comboBoxDifficulty === "Difficulty") {
             if (quizData != null) {
                 let data: QuizObject[] = JSON.parse(quizData);
-                setQuizCardData(data)
+                let dataUpdated: QuizObject[] = updateDifficulty(data)
+                setQuizCardData(dataUpdated)
                 return
             }
             else
@@ -91,7 +97,8 @@ export function Quizzes() {
                 case "5 star": difficulty = 5; break;
             }
 
-            data.forEach(quiz => {
+            let dataUpdated: QuizObject[] = updateDifficulty(data)
+            dataUpdated.forEach(quiz => {
 
                 if (comboBoxGroup === "Group" && difficulty === quiz.difficulty) {
                     filteredData.push(quiz)
@@ -105,6 +112,8 @@ export function Quizzes() {
                     filteredData.push(quiz)
                 }
             })
+
+
 
             setQuizCardData(filteredData)
         }
