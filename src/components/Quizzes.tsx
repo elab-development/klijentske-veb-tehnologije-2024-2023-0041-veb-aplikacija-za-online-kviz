@@ -121,6 +121,8 @@ export function Quizzes() {
             return
     }
 
+
+
     return (
         <div>
             <Menu page={pageType.Quizzes} user={currentUser} />

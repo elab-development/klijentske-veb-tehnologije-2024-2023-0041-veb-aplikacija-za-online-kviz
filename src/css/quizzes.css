@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 130px;
+    gap: 300px;
     row-gap: 40px;
 }
 
@@ -20,4 +20,18 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 50px;
+}
+
+#quizzes-content-container {
+    overflow-y: auto;
+}
+
+@media (min-width: 900px) {
+    #list-of-quiz {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 85px;
+        row-gap: 70px;
+    }
 }

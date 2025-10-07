@@ -1,9 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Kite+One&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 #myProfileContent {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 83vh;
+}
+
+#adminEditContainer {
+    display: flex;
+    height: 83vh;
+    width: 100vw;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.editInput {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 242px;
+    height: 34px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 20px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+#editLeft {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 40px;
+}
+
+#editInnerLeft {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonLeft {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    border-radius: 10px;
+    width: 180px;
+    height: 64px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#quizImage {
+    width: 275px;
+    height: 341px;
+    border-radius: 10px;
+}
+
+#editCenter {
+    padding-top: 10px;
+    width: 40%;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 25px;
+
+}
+
+#descriptionInput {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    border: 1px solid black;
+    outline: none;
+    width: 385px;
+    height: 338px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#editRight {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
 #profilePhotoContainer {
@@ -65,4 +166,111 @@
 #imgSAVEbtn {
     background-color: transparent;
     border: none;
+}
+
+
+.inputChange {
+    margin-bottom: 5px;
+    border: 1px solid black;
+    outline: none;
+
+    text-align: center;
+    font-family: "Carlito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    width: 242px;
+    height: 34px;
+}
+
+
+
+.inputChangeLabel {
+    font-size: 20px;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#quizGroupContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizEdit {
+    margin-top: 5px;
+}
+
+
+#timerEditContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: "Kite One", sans-serif;
+}
+
+.timerTime {
+    width: 35px;
+    height: 30px;
+    font-size: 17px;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 3px;
+    margin-left: 3px;
+    text-align: center;
+}
+
+#timerContainer {
+    font-family: "Kite One", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singleOptionEdit {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#editRight {
+
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#optionsConteiner {
+    position: relative;
+    right: 5%;
+}
+
+.optionName {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.radioInput {
+    accent-color: #4360E1;
+    width: 20px;
+    height: 20px;
 }
