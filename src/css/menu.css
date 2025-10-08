@@ -37,8 +37,11 @@
 
 
 .userPhoto {
-    height: 28%;
-    width: 28%;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    position: relative;
+    left: 5px;
 }
 
 .userName {
@@ -101,4 +104,15 @@
 
 .single-menu-field:hover {
     color: #47E99B
+}
+
+@media (min-width: 1900px) {
+    .userPhoto {
+        width: 25%;
+        height: 25%;
+        border-radius: 50%;
+        position: relative;
+        left: 5px;
+        bottom: 10px;
+    }
 }

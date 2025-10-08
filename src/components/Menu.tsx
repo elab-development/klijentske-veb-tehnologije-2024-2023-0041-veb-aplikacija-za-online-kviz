@@ -55,7 +55,7 @@ export function Menu(props: menuObject) {
             </div >
 
             <div className='userInfoContainer'>
-                <img src={userPhoto} className='userPhoto'></img>
+                <img src={"/img/" + props.user.photo} className='userPhoto'></img>
                 <div className='userName'>{props.user.username}</div>
                 <img src={logout} className='userLogout' onClick={logoutMethod}></img>
             </div>

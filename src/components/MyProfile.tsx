@@ -1,7 +1,6 @@
 import { Menu, pageType } from "./Menu";
 import { User, dataUser } from "../modules/User";
 import '../css/myProfile.css'
-import userPhoto from "../img/userPhoto.png"
 import { InputChange } from "./InputChange";
 import saveIMG from '../img/save.png'
 import { useEffect, useState } from "react";
@@ -38,7 +37,8 @@ export function MyProfile() {
     const [comboBoxQuestion, setComboBoxQuestion] = useState<string[]>([])
     const [selectedQuiz, setSelectedQuiz] = useState<string>("")
     const [img, setImg] = useState<string>("")
-
+    const [imgProfile, setImgProfile] = useState<string>("")
+    const [fileNameQuizPhoto, setFileNameQuizPhoto] = useState<string>("")
 
     let firstRenderRef = useRef<boolean>(false)
     let currentQuestionRef = useRef<number>(0)
@@ -82,7 +82,8 @@ export function MyProfile() {
         username: yup.string().required("Username is required").min(3).max(9),
         email: yup.string().email("Email is not valid").required("Email is required"),
         password: yup.string().min(5).max(15).required("Password is required"),
-        repeatPassword: yup.string()
+        repeatPassword: yup.string(),
+
     })
 
     const { register, handleSubmit } = useForm({
@@ -170,7 +171,7 @@ export function MyProfile() {
                     description: inputFieldDescription,
                     group: inputFieldGroup,
                     id: quiz.getNextQuizID(),
-                    image: "default.jpg",
+                    image: fileNameQuizPhoto,
                     time: inputFieldMinutes * 60 + inputFieldSeconds,
                     questionsID: [quiz.getNextQuestionID()]
                 }
@@ -221,7 +222,7 @@ export function MyProfile() {
             description: inputFieldDescription,
             group: inputFieldGroup,
             id: currentQuizRef.current.id,
-            image: currentQuizRef.current.image,
+            image: fileNameQuizPhoto,
             time: inputFieldMinutes * 60 + inputFieldSeconds,
             questionsID: currentQuizRef.current.questionsID
         }
@@ -276,6 +277,8 @@ export function MyProfile() {
             setInputFieldC("")
             setInputFieldD("")
             setSelectedRadio("none")
+
+
             return
         }
 
@@ -291,12 +294,20 @@ export function MyProfile() {
         setSelectedRadio(currentQuestionDataRef.current.correctAnswer)
     }
 
+
+    function handleFileChangeQuizPhoto(event: React.ChangeEvent<HTMLInputElement>) {
+        const file = event.target.files?.[0];
+        if (file) {
+            setFileNameQuizPhoto(file.name);
+        }
+    }
+
+
     function handleChangeQuiz(name: string) {
         if (name === "+ADD QUIZ" && !newQuiz.current) {
             {
                 newQuiz.current = true
                 setInputFieldName("")
-                setImg("default.jpg")
                 setInputFieldGroup("")
                 setInputFieldDescription("")
                 setInputFieldMinutes(0)
@@ -307,6 +318,7 @@ export function MyProfile() {
                 setInputFieldC("")
                 setInputFieldD("")
                 setSelectedRadio("none")
+                setFileNameQuizPhoto("default.jpg")
                 return
             }
 
@@ -392,6 +404,7 @@ export function MyProfile() {
         }
 
 
+
         return (<div>
             <Menu page={pageType.MyProfile} user={currentUser} />
             <div id="adminEditContainer">
@@ -399,8 +412,8 @@ export function MyProfile() {
                     <div id="editInnerLeft">
                         <ComboBox change={handleChangeQuiz} name={comboBoxName[0]} listOptions={comboBoxName.slice(1, comboBoxName.length)} state={setSelectedQuiz} />
                         <input type="text" className="editInput" value={inputFieldName} onChange={e => { setInputFieldName(e.target.value) }} />
-                        <img src={"/img/" + img} id="quizImage" />
-                        <button id="buttonLeft">CHANGE PHOTO</button>
+                        <img src={fileNameQuizPhoto === "" ? ("/img/" + currentQuizRef.current.image) : ("/img/" + fileNameQuizPhoto)} id="quizImage" />
+                        <label id="buttonLeft" htmlFor="fileQuiz">CHANGE PHOTO</label><input onChange={event => handleFileChangeQuizPhoto(event)} type="file" id="fileQuiz" style={{ display: "none" }} />
                     </div>
                 </div>
                 <div id="editCenter">
@@ -496,9 +509,11 @@ export function MyProfile() {
                     user.username = data.username
                     user.email = data.email
                     user.password = data.password
+                    user.photo = imgProfile
                     currentUser.username = data.username
                     currentUser.email = data.email
                     currentUser.password = data.password
+                    currentUser.photo = imgProfile
 
                 }
 
@@ -512,11 +527,23 @@ export function MyProfile() {
             return
     }
 
+    function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
+        let file = event.target.files?.[0];
+        if (file) {
+            setImgProfile(file.name)
+        }
+    }
+
+    if (!firstRenderRef.current) {
+        setImgProfile(currentUser.photo)
+        firstRenderRef.current = true
+    }
+
     return (<div>
         <Menu page={pageType.MyProfile} user={currentUser} />
         <div id='myProfileContent'>
-            <div id="profilePhotoContainer"><img src={userPhoto} id="userPhoto" /></div>
-            <div id="changeProfilePhotoBtn">CHANGE PROFILE PHOTO</div>
+            <div id="profilePhotoContainer"><img style={{ width: imgProfile === "userPhoto.png" ? "240px" : "160px", height: imgProfile === "userPhoto.png" ? "240px" : "160px" }} src={"/img/" + imgProfile} id="userPhoto" /></div>
+            <div id="inputFileWrapper"><label htmlFor="changeProfilePhotoBtn">CHANGE PROFILE PHOTO</label><input type="file" id="changeProfilePhotoBtn" accept=".jpg, .jpeg, .png" onChange={handleFileChange} /></div>
             <form id="profileInputContainer" onSubmit={handleSubmit(onSubmit, onError)}>
                 <InputChange name="username" label="USERNAME" locked={locked} setLocked={setLocked} initialValue={currentUser.username} register={register} />
                 <InputChange name="email" label="EMAIL" locked={locked} setLocked={setLocked} initialValue={currentUser.email} register={register} />
@@ -526,5 +553,5 @@ export function MyProfile() {
             </form>
 
         </div>
-    </div>)
+    </div >)
 }

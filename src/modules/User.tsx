@@ -3,6 +3,7 @@ export interface dataUser {
     email: string;
     password: string;
     id: number;
+    photo: string;
 }
 
 interface userMethods {
@@ -21,18 +22,21 @@ export class User implements dataUser, userMethods {
     password: string;
     id: number;
     currentUserData: dataUser;
+    photo: string;
 
     constructor(username: string, email: string, password: string) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.id = this.generateID();
+        this.photo = "userPhoto.png"
 
         this.currentUserData = {
             username: username,
             email: email,
             password: password,
-            id: this.generateID()
+            id: this.generateID(),
+            photo: this.photo
         };
 
     }
@@ -108,6 +112,7 @@ export class User implements dataUser, userMethods {
             email: "",
             password: "",
             id: 0,
+            photo: "userPhoto.png"
         };
 
         if (structuredData.length === 0)

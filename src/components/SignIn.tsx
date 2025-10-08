@@ -75,6 +75,7 @@ export function SignIn() {
             email: newUser.email,
             password: newUser.password,
             id: newUser.id,
+            photo: "userPhoto.png"
         }
 
         localStorage.setItem("currentUser", JSON.stringify(currentUser))
