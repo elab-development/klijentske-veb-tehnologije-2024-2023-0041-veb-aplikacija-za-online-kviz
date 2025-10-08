@@ -37,6 +37,8 @@ export function Menu(props: menuObject) {
             case "QUIZZES": navigate('/quizzes'); break;
             case "MY STATS": navigate('/my-stats'); break;
             case "MY PROFILE": navigate('/my-profile'); break;
+            case "STATS": navigate('/my-stats'); break;
+            case "EDIT": navigate('/my-profile'); break;
         }
     }
     return (
@@ -48,8 +50,8 @@ export function Menu(props: menuObject) {
             <div className='single-menu-container'>
                 <div className={props.page === pageType.Home ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>HOME</div>
                 <div className={props.page === pageType.Quizzes ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>QUIZZES</div>
-                <div className={props.page === pageType.MyStats ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>MY STATS</div>
-                <div className={props.page === pageType.MyProfile ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>MY PROFILE</div >
+                <div className={props.page === pageType.MyStats ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>{props.user.username === "admin" ? "STATS" : "MY STATS"}</div>
+                <div className={props.page === pageType.MyProfile ? 'onPageState' : 'single-menu-field'} onClick={menuNavigation}>{props.user.username === "admin" ? "EDIT" : "MY PROFILE"}</div >
             </div >
 
             <div className='userInfoContainer'>

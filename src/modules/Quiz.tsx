@@ -1,6 +1,6 @@
 import { difficulty } from "../components/QuizCard"
 import { QuizObject } from "../components/QuizCard"
-import { quizQuestion } from "../components/SingleQuestion"
+import { quizQuestion, quizTry } from "../components/SingleQuestion"
 
 interface quizMethods {
     getAllQuizzes(): QuizObject[]
@@ -107,6 +107,16 @@ export class Quiz implements QuizObject, quizMethods {
 
     getNextQuizID(): number {
         return this.getAllQuizzes().length + 1
+    }
+
+    getAllQuizTries(): quizTry[] {
+        let allQuizTriesJSON: string = localStorage.getItem("quizTriesArray") || ""
+        if (allQuizTriesJSON != "") {
+            let allQuizTries: quizTry[] = JSON.parse(allQuizTriesJSON)
+            return allQuizTries
+        }
+        else
+            return []
     }
 
 }

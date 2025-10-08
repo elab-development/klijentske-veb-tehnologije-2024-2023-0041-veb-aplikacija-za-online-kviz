@@ -1,12 +1,15 @@
 #tableContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    min-height: 78vh;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow-y: hidden;
+
 }
 
-body {
-    overflow-y: auto;
+#myStatsPage {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh
 }

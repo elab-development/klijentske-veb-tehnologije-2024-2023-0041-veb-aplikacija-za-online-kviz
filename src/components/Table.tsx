@@ -4,6 +4,7 @@ import { quizTry } from './SingleQuestion'
 import { dataUser } from '../modules/User';
 import { QuizObject } from './QuizCard';
 import { stringifyTime } from '../modules/stringifyTime';
+import { Quiz } from '../modules/Quiz';
 
 
 
@@ -23,8 +24,98 @@ interface tableProps {
 export function Table(props: tableProps) {
     const navigate = useNavigate();
 
-    if (props.admin)
-        return <div>Admin</div>
+    if (props.admin) {
+        let quiz: Quiz = new Quiz("", "", 0, "", 0, "", [], 0)
+        let allQuizData: QuizObject[] = quiz.getAllQuizzes()
+        let allTriesData: quizTry[] = quiz.getAllQuizTries()
+        let finalData: tableData[] = []
+        allQuizData.forEach((quiz: QuizObject) => {
+            let counter: number = 0
+            let sumScore: number = 0
+            let sumTime: number = 0
+            let bestScore: number = -100
+            let bestTime: number = 10000000
+            let found: boolean = false
+            allTriesData.forEach((singleTry: quizTry) => {
+                if (quiz.id === singleTry.quizID) {
+                    found = true
+                    counter++
+                    sumScore = sumScore + singleTry.score
+                    sumTime = sumTime + singleTry.time
+                    if (bestScore < singleTry.score)
+                        bestScore = singleTry.score
+
+                    if (bestTime > singleTry.time)
+                        bestTime = singleTry.time
+                }
+            })
+
+            if (found) {
+                let stringifiedTime: string[] = stringifyTime(Math.floor(sumTime / counter))
+                let singleRow: tableData = {
+                    quizName: quiz.title,
+                    numberOfAttemtps: counter,
+                    averageScore: (sumScore / counter).toFixed(2),
+                    averageTime: stringifiedTime[0] + ":" + stringifiedTime[1],
+                    bestScore: bestScore.toString(),
+                    bestTime: bestTime.toString(),
+                }
+
+                finalData.push(singleRow)
+            }
+
+
+        })
+
+
+        return (<table>
+            <tr>
+                <th></th>
+                <th>Number of attempts</th>
+                <th>Average score</th>
+                <th>Average time</th>
+                <th>Best score</th>
+                <th>Best time</th>
+            </tr>
+
+            {
+                finalData.map((singleRow: tableData) => {
+                    return (
+                        <tr>
+                            <th>{singleRow.quizName}</th>
+                            <th style={{ backgroundColor: "white", color: "black" }}>{singleRow.numberOfAttemtps}</th>
+                            <th style={{ backgroundColor: "white", color: "black" }}>{singleRow.averageScore + "%"}</th>
+                            <th style={{ backgroundColor: "white", color: "black" }}>{singleRow.averageTime}</th>
+                            <th style={{ backgroundColor: "white", color: "black" }}>{singleRow.bestScore + "%"}</th>
+                            <th style={{ backgroundColor: "white", color: "black" }}>{singleRow.bestTime}</th>
+                        </tr>
+                    );
+                })
+            }
+        </table>)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     let allAttemptsJSON: string = localStorage.getItem("quizTriesArray") || ""
 
     if (allAttemptsJSON === "") {

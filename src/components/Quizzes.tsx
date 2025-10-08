@@ -225,7 +225,7 @@ export function Quizzes() {
     }
 
     return (
-        <div>
+        <div id="quizzesPage">
             <Menu page={pageType.Quizzes} user={currentUser} />
             <div id="quizzes-content-container">
                 <div id="filter-container">

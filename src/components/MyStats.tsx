@@ -20,7 +20,7 @@ export function MyStats() {
         admin = true;
 
     return (
-        <div>
+        <div id="myStatsPage">
             <Menu page={pageType.MyStats} user={currentUser} />
             <div id="tableContainer">
                 <Table admin={admin} />
