@@ -439,7 +439,7 @@ export function MyProfile() {
                         </div>
                     </div>
 
-                    <button id="buttonLeft" style={{ position: "relative", left: "22%", top: "3%" }} onClick={saveChanges}>SAVE</button>
+                    <button id="buttonRight" onClick={saveChanges}>SAVE</button>
                 </div>
             </div>
         </div>)

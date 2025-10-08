@@ -1,13 +1,6 @@
 import { Menu, pageType } from "./Menu";
 import { dataUser } from "../modules/User";
 import "../css/singleQuiz.css"
-import history from '../img/history.jpg'
-import geography from '../img/geography.jpg'
-import football from '../img/football.jpg'
-import tennis from '../img/tennis.jpeg'
-import basketball from '../img/basketball.png'
-import economics from '../img/economics.jpg'
-import defaultQuizIMG from '../img/default.jpg'
 import starFull from '../img/star-full.png'
 import starEmpty from '../img/star-empty.png'
 import { QuizObject } from './QuizCard'
@@ -68,16 +61,8 @@ export function SingleQuiz() {
             currentQuizRef.current = quiz
         }
     });
-    let img;
-    switch (currentQuizData.image) {
-        case "history.jpg": img = <img src={history} className='quizIMG' />; break;
-        case "geography.jpg": img = <img src={geography} className='quizIMG' />; break;
-        case "football.jpg": img = <img src={football} className='quizIMG' />; break;
-        case "tennis.jpg": img = <img src={tennis} className='quizIMG' />; break;
-        case "basketball.jpg": img = <img src={basketball} className='quizIMG' />; break;
-        case "economics.jpg": img = <img src={economics} className='quizIMG' />; break;
-        default: img = <img src={defaultQuizIMG} className='quizIMG' />; break;
-    }
+
+
 
     let numberFull: number = currentQuizData.difficulty;
 
@@ -153,7 +138,7 @@ export function SingleQuiz() {
             <div id="single-Quiz-page-container">
                 <div id="single-Quiz-page-container-left">
                     <div id="quizTitle">{currentQuizData.title}</div>
-                    {img}
+                    <img src={"/img/" + currentQuizData.image} className='quizIMG' />
                 </div>
                 <div id="single-Quiz-page-container-center">
                     <div id="difficultyContainer">Difficulty:

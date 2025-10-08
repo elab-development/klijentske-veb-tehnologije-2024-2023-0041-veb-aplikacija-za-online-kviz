@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Khand:wght@300;400;500;600;700&family=Kings&family=Kite+One&display=swap');
+
 body {
     overflow-x: hidden;
 }
 
 #filter-container {
     margin-bottom: 10px;
+    position: relative;
 }
 
 #list-of-quiz {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 300px;
+    gap: 140px;
     row-gap: 40px;
 }
 
@@ -23,10 +26,33 @@ body {
 }
 
 #quizzes-content-container {
+
     overflow-y: auto;
 }
 
-@media (min-width: 900px) {
+#paginationConteiner {
+    font-size: 20px;
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    left: 31%;
+}
+
+#checkPagination {
+    position: relative;
+    top: 3px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+#paginationInput {
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 1900px) {
     #list-of-quiz {
         display: flex;
         flex-direction: row;
@@ -34,4 +60,22 @@ body {
         gap: 85px;
         row-gap: 70px;
     }
+
+
+    #paginationConteiner {
+        font-family: "Kite One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        position: relative;
+        left: 43%;
+    }
+
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
 }

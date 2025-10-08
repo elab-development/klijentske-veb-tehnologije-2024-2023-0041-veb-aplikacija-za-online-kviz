@@ -134,3 +134,18 @@ ul li {
     position: relative;
     top: 5px;
 }
+
+@media (min-width: 1900px) {
+    #single-Quiz-page-container-left {
+        width: 25%;
+        position: relative;
+        top: 10%;
+    }
+
+    #single-Quiz-page-container-center {
+        position: relative;
+        top: 15%;
+        width: 30%;
+        padding-top: 60px;
+    }
+}

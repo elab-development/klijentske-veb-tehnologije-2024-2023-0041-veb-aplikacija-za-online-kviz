@@ -274,3 +274,53 @@
     width: 20px;
     height: 20px;
 }
+
+#buttonRight {
+    font-family: "Kite One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    border-radius: 10px;
+    width: 180px;
+    height: 64px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    left: 22%;
+    top: 3%;
+}
+
+@media (min-width: 1900px) {
+    #editCenter {
+        position: relative;
+        top: 10%;
+        padding-top: 10px;
+        width: 40%;
+        font-family: "Kite One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        gap: 25px;
+
+    }
+
+    #buttonRight {
+        font-family: "Kite One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: black;
+        border-radius: 10px;
+        width: 180px;
+        height: 64px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        left: 15%;
+    }
+}
