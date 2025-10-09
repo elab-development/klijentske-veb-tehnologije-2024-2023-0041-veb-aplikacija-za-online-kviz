@@ -1,0 +1,202 @@
+[
+  {
+    "title": "History",
+    "difficulty": 3,
+    "description": "This quiz iz about historical figures, wars, battles, myths, legends...",
+    "group": "Science",
+    "id": 1,
+    "image": "history.jpg",
+    "time": 725,
+    "questionsID": [1, 2, 3, 4, 5, 84, 85, 86, 87, 88]
+  },
+  {
+    "title": "Geography",
+    "difficulty": 2,
+    "description": "This quiz is about mountains, cities, countries, rivers, lakes, oceans...",
+    "group": "Science",
+    "id": 2,
+    "image": "geography.jpg",
+    "time": 360,
+    "questionsID": [6, 7, 8, 9]
+  },
+  {
+    "title": "Football",
+    "difficulty": 0,
+    "description": "This quiz is about football teams, competitions, players, stadiums...",
+    "group": "Sport",
+    "id": 3,
+    "image": "football.jpg",
+    "time": 57,
+    "questionsID": [10, 11, 12, 13, 14, 15]
+  },
+  {
+    "title": "Tennis",
+    "difficulty": 5,
+    "description": "This quiz is about tennis players, tournaments, matches...",
+    "group": "Sport",
+    "id": 4,
+    "image": "tennis.jpeg",
+    "time": 156,
+    "questionsID": [21, 22, 23, 24, 25, 26]
+  },
+  {
+    "title": "Basketball",
+    "difficulty": 1,
+    "description": "This quiz is about basketball players, matches, tournaments...",
+    "group": "Sport",
+    "id": 5,
+    "image": "basketball.png",
+    "time": 1800,
+    "questionsID": [27, 28, 29, 30, 89, 90, 91, 92, 93]
+  },
+  {
+    "title": "Economics",
+    "difficulty": 3,
+    "description": "This quiz iz about economic concepts, theories, economists...",
+    "group": "Science",
+    "id": 6,
+    "image": "economics.jpg",
+    "time": 533,
+    "questionsID": [16, 17, 18, 19, 20]
+  },
+  {
+    "title": "Mind games",
+    "difficulty": 0,
+    "description": "This quiz is about brain teasers & riddles.",
+    "group": "General knowledge & Logic",
+    "id": 7,
+    "image": "thinking.jpg",
+    "time": 363,
+    "questionsID": [31, 32, 33]
+  },
+  {
+    "title": "IQ challange",
+    "difficulty": 2,
+    "description": "This is IQ challange",
+    "group": "General knowledge & Logic",
+    "id": 8,
+    "image": "thinking.jpg",
+    "time": 900,
+    "questionsID": [34, 35, 36]
+  },
+  {
+    "title": "Tech innovations",
+    "difficulty": 4,
+    "description": "This quiz is about tech innovations.",
+    "group": "Technology",
+    "id": 9,
+    "image": "tech.jpg",
+    "time": 540,
+    "questionsID": [37, 38, 39, 40]
+  },
+  {
+    "title": "Discoveries",
+    "difficulty": 4,
+    "description": "This quiz is about discoveries",
+    "group": "Technology",
+    "id": 10,
+    "image": "tech.jpg",
+    "time": 190,
+    "questionsID": [41, 42]
+  },
+  {
+    "title": "Books",
+    "difficulty": 1,
+    "description": "This quis is about books.",
+    "group": "Literature & Language",
+    "id": 11,
+    "image": "book.png",
+    "time": 1206,
+    "questionsID": [43, 44, 45, 46, 47]
+  },
+  {
+    "title": "English words",
+    "difficulty": 0,
+    "description": "This quiz is about english vocabulary.",
+    "group": "Literature & Language",
+    "id": 12,
+    "image": "book.png",
+    "time": 180,
+    "questionsID": [48, 49, 50]
+  },
+  {
+    "title": "Fitness",
+    "difficulty": 1,
+    "description": "This quiz is about fitness",
+    "group": "Lifestyle",
+    "id": 13,
+    "image": "lifestyle.jpg",
+    "time": 660,
+    "questionsID": [51, 52, 53, 54]
+  },
+  {
+    "title": "Food",
+    "difficulty": 5,
+    "description": "This quis is about food.",
+    "group": "Lifestyle",
+    "id": 14,
+    "image": "food.jpg",
+    "time": 433,
+    "questionsID": [55, 56, 57, 58, 59]
+  },
+  {
+    "title": "Fashion",
+    "difficulty": 3,
+    "description": "This quiz is about fashion.",
+    "group": "Lifestyle",
+    "id": 15,
+    "image": "fashion.jpg",
+    "time": 1020,
+    "questionsID": [60, 61, 62]
+  },
+  {
+    "title": "Video games",
+    "difficulty": 3,
+    "description": "This quiz is about video games.",
+    "group": "Games",
+    "id": 16,
+    "image": "games.jpg",
+    "time": 300,
+    "questionsID": [63, 64, 65, 66]
+  },
+  {
+    "title": "Board games",
+    "difficulty": 2,
+    "description": "This quiz is about board games",
+    "group": "Games",
+    "id": 17,
+    "image": "games.jpg",
+    "time": 600,
+    "questionsID": [67, 68, 69, 70, 71]
+  },
+  {
+    "title": "Physics",
+    "difficulty": 2,
+    "description": "This quiz is about Physics.",
+    "group": "Science",
+    "id": 18,
+    "image": "physics.jpg",
+    "time": 1440,
+    "questionsID": [72, 73, 74]
+  },
+  {
+    "title": "Math",
+    "difficulty": 2,
+    "description": "This quiz is about mathematics.",
+    "group": "Science",
+    "id": 19,
+    "image": "math.jpg",
+    "time": 1800,
+    "questionsID": [75, 76, 77, 78]
+  },
+  {
+    "title": "Art",
+    "difficulty": 0,
+    "description": "This quiz is about art.",
+    "group": "Creativity",
+    "id": 20,
+    "image": "art.jpg",
+    "time": 330,
+    "questionsID": [79, 80, 81, 82, 83]
+  }
+]

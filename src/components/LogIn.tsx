@@ -22,8 +22,8 @@ export function LogIn() {
     const [loginObject, setLoginObject] = useState<string[]>([]);
 
 
-    function loginUser(event: React.MouseEvent<HTMLButtonElement>) {
-        event.preventDefault();
+    function loginUser() {
+
         if (loginObject[0] && loginObject[1]) {
             let helpUser: User = new User("", "", "",);
             let user: dataUser = helpUser.checkCredentials(loginObject[0], loginObject[1])

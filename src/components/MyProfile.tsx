@@ -14,9 +14,10 @@ import { QuizObject } from "./QuizCard";
 import { useRef } from "react";
 import { quizQuestion, quizTry } from "./SingleQuestion";
 import { option } from "./AnswerOption";
-import defaultQuizIMG from '../img/default.jpg'
+import deletePNG from "../img/delete.png";
 
 export function MyProfile() {
+
     const [locked, setLocked] = useState(true);
 
     const [restart, setRestart] = useState<string>("")
@@ -216,13 +217,21 @@ export function MyProfile() {
             }
         }
 
+        let img: string = ""
+        if (fileNameQuizPhoto === "") {
+            img = currentQuizRef.current.image
+        }
+        else {
+            img = fileNameQuizPhoto
+        }
+
         let dataQuizChanged: QuizObject = {
             title: inputFieldName,
             difficulty: currentQuizRef.current.difficulty,
             description: inputFieldDescription,
             group: inputFieldGroup,
             id: currentQuizRef.current.id,
-            image: fileNameQuizPhoto,
+            image: img,
             time: inputFieldMinutes * 60 + inputFieldSeconds,
             questionsID: currentQuizRef.current.questionsID
         }
@@ -244,6 +253,8 @@ export function MyProfile() {
             case "C": correctChanged = option.C; break;
             case "D": correctChanged = option.D; break;
         }
+
+
 
         let questionChanged: quizQuestion = {
             quizID: currentQuestionDataRef.current.quizID,
@@ -300,6 +311,71 @@ export function MyProfile() {
         if (file) {
             setFileNameQuizPhoto(file.name);
         }
+    }
+
+    function deleteQuiz() {
+        let quiz: Quiz = new Quiz("", "", 0, "", 0, "", [], 0)
+
+        let allQuizzes: QuizObject[] = quiz.getAllQuizzes()
+        let allQuizzesFixed: QuizObject[] = []
+        allQuizzes.forEach((quiz: QuizObject) => {
+            if (quiz.id != currentQuizRef.current.id) {
+                allQuizzesFixed.push(quiz)
+            }
+        })
+        localStorage.setItem("quizObjects", JSON.stringify(allQuizzesFixed))
+
+        let allQuestions: quizQuestion[] = quiz.getAllQuizQuestions()
+        let allQuestionsFixed: quizQuestion[] = []
+        allQuestions.forEach((question: quizQuestion) => {
+            if (question.quizID != currentQuizRef.current.id) {
+                allQuestionsFixed.push(question)
+            }
+        })
+        localStorage.setItem("arrayQuestions", JSON.stringify(allQuestionsFixed))
+
+        let allQuizTries: quizTry[] = quiz.getAllQuizTries()
+        let allQuizTriesFixed: quizTry[] = []
+        allQuizTries.forEach((attempt: quizTry) => {
+            if (attempt.quizID != currentQuizRef.current.id) {
+                allQuizTriesFixed.push(attempt)
+            }
+        })
+        localStorage.setItem("quizTriesArray", JSON.stringify(allQuizTriesFixed))
+
+        window.location.reload()
+        return
+    }
+
+    function deleteQuestion() {
+        let quiz: Quiz = new Quiz("", "", 0, "", 0, "", [], 0)
+        let allQuestions: quizQuestion[] = quiz.getAllQuizQuestions()
+        let allQuestionsRemovedQuestion: quizQuestion[] = [];
+        allQuestions.forEach((question: quizQuestion) => {
+            if (!(question.questionID === currentQuestionIDRef.current)) {
+                allQuestionsRemovedQuestion.push(question)
+            }
+        })
+        localStorage.setItem("arrayQuestions", JSON.stringify(allQuestionsRemovedQuestion))
+
+        let questionsQuiz: number[] = currentQuizRef.current.questionsID
+        let questionsQuizFixed: number[] = []
+        questionsQuiz.forEach((id: number) => {
+            if (!(id === currentQuestionIDRef.current)) {
+                questionsQuizFixed.push(id)
+            }
+        })
+
+        let allQuizzes: QuizObject[] = quiz.getAllQuizzes()
+        allQuizzes.forEach((quiz: QuizObject, index: number) => {
+            if (quiz.id === currentQuizRef.current.id) {
+                allQuizzes[index].questionsID = questionsQuizFixed
+            }
+        })
+
+        localStorage.setItem("quizObjects", JSON.stringify(allQuizzes))
+        window.location.reload()
+        return
     }
 
 
@@ -410,7 +486,10 @@ export function MyProfile() {
             <div id="adminEditContainer">
                 <div id="editLeft">
                     <div id="editInnerLeft">
-                        <ComboBox change={handleChangeQuiz} name={comboBoxName[0]} listOptions={comboBoxName.slice(1, comboBoxName.length)} state={setSelectedQuiz} />
+                        <div>
+                            <ComboBox change={handleChangeQuiz} name={comboBoxName[0]} listOptions={comboBoxName.slice(1, comboBoxName.length)} state={setSelectedQuiz} />
+                            <img src={deletePNG} id="deleteQuiz" onClick={deleteQuiz}></img>
+                        </div>
                         <input type="text" className="editInput" value={inputFieldName} onChange={e => { setInputFieldName(e.target.value) }} />
                         <img src={fileNameQuizPhoto === "" ? ("/img/" + currentQuizRef.current.image) : ("/img/" + fileNameQuizPhoto)} id="quizImage" />
                         <label id="buttonLeft" htmlFor="fileQuiz">CHANGE PHOTO</label><input onChange={event => handleFileChangeQuizPhoto(event)} type="file" id="fileQuiz" style={{ display: "none" }} />
@@ -432,7 +511,10 @@ export function MyProfile() {
                     </div>
                 </div>
                 <div id="editRight">
-                    <ComboBox name={comboBoxQuestion[0]} listOptions={comboBoxQuestion.slice(1, comboBoxQuestion.length)} state={setRestart} change={handleChangeQuestion} selectedFirst={selectedFirstQuestion.current} key={selectedQuiz} />
+                    <div>
+                        <ComboBox name={comboBoxQuestion[0]} listOptions={comboBoxQuestion.slice(1, comboBoxQuestion.length)} state={setRestart} change={handleChangeQuestion} selectedFirst={selectedFirstQuestion.current} key={selectedQuiz} />
+                        <img src={deletePNG} id="deleteQuestion" onClick={deleteQuestion}></img>
+                    </div>
                     <input type="text" id="quizEdit" className="editInput" value={inputFieldQuestion} onChange={e => { setInputFieldQuestion(e.target.value) }} style={{ width: "400px", fontSize: "15px" }} />
                     <div id="optionsConteiner">
                         <div className="singleOptionEdit">

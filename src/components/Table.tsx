@@ -57,7 +57,7 @@ export function Table(props: tableProps) {
                     numberOfAttemtps: counter,
                     averageScore: (sumScore / counter).toFixed(2),
                     averageTime: stringifiedTime[0] + ":" + stringifiedTime[1],
-                    bestScore: bestScore.toString(),
+                    bestScore: (bestScore.toFixed(2)).toString(),
                     bestTime: bestTime.toString(),
                 }
 

@@ -237,7 +237,7 @@ export function Quizzes() {
                         {"Pagination: "}
                         <input type="checkbox" id="checkPagination" onClick={() => setPaginationState(!paginationState)} />
                         {"Number of quizzes per page: "}
-                        <input type="number" value={paginationSize} min={1} id="paginationInput" onChange={e => { setPaginationSize(parseInt(e.target.value)); setRegisterChangePage(!registerChangePage) }} />
+                        <input type="number" value={paginationSize} min={1} max={allQuizzes.length} id="paginationInput" onChange={e => { setPaginationSize(parseInt(e.target.value)); setRegisterChangePage(!registerChangePage) }} />
                         <img src={arrowLeft} className="arrow" onClick={() => nextPage("previous")}></img>
                         {page + "/" + numberOfPages}
                         <img src={arrowRight} className="arrow" onClick={() => nextPage("next")}></img>

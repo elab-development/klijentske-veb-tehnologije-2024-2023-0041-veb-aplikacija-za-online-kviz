@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+Pokretanje projekta na lokalnoj mašini:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **Kloniranje repozitorijuma:**
+git clone https://github.com/elab-development/klijentske-veb-tehnologije-2024-2023-0041-veb-aplikacija-za-online-kviz
 
-## Available Scripts
+2. **Pristupanje direktorijumu projekta:**
+cd klijentske-veb-tehnologije-2024-2023-0041-veb-aplikacija-za-online-kviz
 
-In the project directory, you can run:
+3. **Instalacija NPM paketa:**
+npm install
 
-### `npm start`
+4. **Pokretanje aplikacije:**
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Opis funkcionalnosti projekta:
+- **Registracija korisnika** - Omogućava kreiranje novog korisničkog naloga unosom korisničkog imena, e-mail adrese i lozinke. Sistem proverava ispravnost unetih podataka i sprečava registraciju duplih naloga.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Prijavljivanje i odjavljivanje korisnika** - Korisnici se prijavljuju pomoću korisničkog imena i lozinke. Sistem omogućava sigurno odjavljivanje iz naloga i završetak sesije.
 
-### `npm test`
+- **Pregled i filtriranje kvizova** - Korisnik može pregledati sve dostupne kvizove u aplikaciji. Postoji mogućnost filtriranja kvizova po tematskoj grupi i težini.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Pokretanje i rešavanje kviza** - Korisnik može izabrati željeni kviz i započeti rešavanje. Sistem prikazuje pitanja jedno po jedno sa ponuđenim odgovorima. Nakon završetka, korisnik dobija informaciju o broju tačnih  i netacnih odgovora i procentu uspešnosti.
 
-### `npm run build`
+- **Evidencija i čuvanje rezultata** - Sistem automatski beleži rezultate svakog pokušaja kviza. Rezultati se povezuju sa nalogom korisnika i čuvaju u local storage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Statistika korisnika** - Korisnik može pregledati svoju ličnu statistiku: broj pokusaja odredjenog kviza, najbolji rezultat i prosečan uspeh, najbolje vreme i prosecno vreme. Administrator ima uvid u statistiku svih korisnika.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Administratorske funkcionalnosti** - Administrator može dodavati nove kvizove i pitanja. Može menjati sadržaj postojećih kvizova i pitanja. Može brisati kvizove i pitanja koja više nisu potrebna.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

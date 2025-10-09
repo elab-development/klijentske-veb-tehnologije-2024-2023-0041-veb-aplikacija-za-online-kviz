@@ -8,9 +8,14 @@ import { MyProfile } from './components/MyProfile';
 import { SingleQuestion } from './components/SingleQuestion';
 import { SingleQuiz } from './components/SingleQuiz';
 import { MyStats } from './components/MyStats';
-import { Edit } from './components/Edit';
+import { User } from './modules/User';
+import { dataUser } from './modules/User';
+import { useEffect } from 'react';
 
 function App() {
+
+
+
 
   return (
     <div className="App">
@@ -24,7 +29,6 @@ function App() {
           <Route path='/single-question' element={< SingleQuestion />}></Route>
           <Route path='/single-quiz' element={< SingleQuiz />}></Route>
           <Route path='/my-stats' element={< MyStats />}></Route>
-          <Route path='/edit' element={<Edit />}></Route>
         </Routes>
       </Router>
     </div>

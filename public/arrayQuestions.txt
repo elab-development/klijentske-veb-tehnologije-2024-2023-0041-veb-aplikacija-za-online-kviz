@@ -1,0 +1,932 @@
+[
+  {
+    "quizID": 1,
+    "questionID": 1,
+    "questionText": "Who was the first President of the United States?",
+    "optionA": "George Washington",
+    "optionB": "Abraham Lincoln",
+    "optionC": "Thomas Jefferson",
+    "optionD": "John Adams",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 1,
+    "questionID": 2,
+    "questionText": "In which year did World War II end?",
+    "optionA": "1943",
+    "optionB": "1944",
+    "optionC": "1945",
+    "optionD": "1946",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 1,
+    "questionID": 3,
+    "questionText": "Which empire built the Colosseum?",
+    "optionA": "Greek",
+    "optionB": "Roman",
+    "optionC": "Ottoman",
+    "optionD": "Persian",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 4,
+    "questionText": "Who discovered America in 1492?",
+    "optionA": "Christopher Columbus",
+    "optionB": "Ferdinand Magellan",
+    "optionC": "Marco Polo",
+    "optionD": "Vasco da Gama",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 1,
+    "questionID": 5,
+    "questionText": "The Berlin Wall fell in which year?",
+    "optionA": "1985",
+    "optionB": "1987",
+    "optionC": "1990",
+    "optionD": "1989",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 2,
+    "questionID": 6,
+    "questionText": "Which is the largest continent?",
+    "optionA": "Africa",
+    "optionB": "Asia",
+    "optionC": "Europe",
+    "optionD": "North America",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 2,
+    "questionID": 7,
+    "questionText": "Mount Kilimanjaro is located in which country?",
+    "optionA": "Kenya",
+    "optionB": "Tanzania",
+    "optionC": "Uganda",
+    "optionD": "Ethiopia",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 2,
+    "questionID": 8,
+    "questionText": "What is the capital city of Australia?",
+    "optionA": "Sydney",
+    "optionB": "Melbourne",
+    "optionC": "Canberra",
+    "optionD": "Perth",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 2,
+    "questionID": 9,
+    "questionText": "Which river flows through Egypt?",
+    "optionA": "Amazon",
+    "optionB": "Nile",
+    "optionC": "Danube",
+    "optionD": "Mississippi",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 3,
+    "questionID": 10,
+    "questionText": "Which country won the FIFA World Cup in 2018?",
+    "optionA": "Germany",
+    "optionB": "France",
+    "optionC": "Brazil",
+    "optionD": "Argentina",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 3,
+    "questionID": 11,
+    "questionText": "Who holds the record for most goals in a single World Cup?",
+    "optionA": "Miroslav Klose",
+    "optionB": "Just Fontaine",
+    "optionC": "Pelé",
+    "optionD": "Ronaldo Nazário",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 3,
+    "questionID": 12,
+    "questionText": "Which club has won the most UEFA Champions League titles?",
+    "optionA": "AC Milan",
+    "optionB": "Liverpool",
+    "optionC": "Real Madrid",
+    "optionD": "Bayern Munich",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 3,
+    "questionID": 13,
+    "questionText": "In which country is the club Boca Juniors based?",
+    "optionA": "Brazil",
+    "optionB": "Argentina",
+    "optionC": "Spain",
+    "optionD": "Mexico",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 3,
+    "questionID": 14,
+    "questionText": "Who won the Ballon d'Or in 2022?",
+    "optionA": "Lionel Messi",
+    "optionB": "Karim Benzema",
+    "optionC": "Cristiano Ronaldo",
+    "optionD": "Robert Lewandowski",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 3,
+    "questionID": 15,
+    "questionText": "Which country hosted the 2014 FIFA World Cup?",
+    "optionA": "Germany",
+    "optionB": "Russia",
+    "optionC": "South Africa",
+    "optionD": "Brazil",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 6,
+    "questionID": 16,
+    "questionText": "What is GDP an abbreviation for?",
+    "optionA": "Gross Domestic Product",
+    "optionB": "General Debt Policy",
+    "optionC": "Government Development Plan",
+    "optionD": "Global Demand Price",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 6,
+    "questionID": 17,
+    "questionText": "Which currency is used in the Eurozone?",
+    "optionA": "Franc",
+    "optionB": "Dollar",
+    "optionC": "Pound",
+    "optionD": "Euro",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 6,
+    "questionID": 18,
+    "questionText": "Who is known as the father of modern economics?",
+    "optionA": "Adam Smith",
+    "optionB": "John Maynard Keynes",
+    "optionC": "Karl Marx",
+    "optionD": "David Ricardo",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 6,
+    "questionID": 19,
+    "questionText": "Inflation represents a rise in what?",
+    "optionA": "Employment",
+    "optionB": "Currency value",
+    "optionC": "Productivity",
+    "optionD": "Prices of goods and services",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 6,
+    "questionID": 20,
+    "questionText": "Which organization sets global trade rules?",
+    "optionA": "IMF",
+    "optionB": "World Bank",
+    "optionC": "World Trade Organization",
+    "optionD": "OECD",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 4,
+    "questionID": 21,
+    "questionText": "Who has won the most Grand Slam men's singles titles?",
+    "optionA": "Novak Djokovic",
+    "optionB": "Roger Federer",
+    "optionC": "Rafael Nadal",
+    "optionD": "Pete Sampras",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 4,
+    "questionID": 22,
+    "questionText": "The French Open is played on which surface?",
+    "optionA": "Grass",
+    "optionB": "Clay",
+    "optionC": "Hard Court",
+    "optionD": "Carpet",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 4,
+    "questionID": 23,
+    "questionText": "Which female player has the most Grand Slam singles titles?",
+    "optionA": "Martina Navratilova",
+    "optionB": "Serena Williams",
+    "optionC": "Margaret Court",
+    "optionD": "Steffi Graf",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 4,
+    "questionID": 24,
+    "questionText": "Where is the Wimbledon tournament held?",
+    "optionA": "Paris",
+    "optionB": "New York",
+    "optionC": "London",
+    "optionD": "Melbourne",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 4,
+    "questionID": 25,
+    "questionText": "Which scoring term represents zero in tennis?",
+    "optionA": "Zero",
+    "optionB": "Love",
+    "optionC": "Nil",
+    "optionD": "Blank",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 4,
+    "questionID": 26,
+    "questionText": "Who won the 2021 US Open men’s singles?",
+    "optionA": "Dominic Thiem",
+    "optionB": "Daniil Medvedev",
+    "optionC": "Rafael Nadal",
+    "optionD": "Novak Djokovic",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 5,
+    "questionID": 27,
+    "questionText": "Which team won the 2020 NBA Championship?",
+    "optionA": "Miami Heat",
+    "optionB": "Los Angeles Lakers",
+    "optionC": "Golden State Warriors",
+    "optionD": "Toronto Raptors",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 5,
+    "questionID": 28,
+    "questionText": "Who is known as 'His Airness' in basketball history?",
+    "optionA": "Kobe Bryant",
+    "optionB": "Michael Jordan",
+    "optionC": "LeBron James",
+    "optionD": "Magic Johnson",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 5,
+    "questionID": 29,
+    "questionText": "Which player holds the record for most career points in the NBA?",
+    "optionA": "LeBron James",
+    "optionB": "Kareem Abdul-Jabbar",
+    "optionC": "Karl Malone",
+    "optionD": "Wilt Chamberlain",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 5,
+    "questionID": 30,
+    "questionText": "How many players from one team are on the court during a standard NBA game?",
+    "optionA": "4",
+    "optionB": "5",
+    "optionC": "6",
+    "optionD": "7",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 31,
+    "questionText": "I’m tall when I’m young and short when I’m old. What am I?",
+    "optionA": "A mountain",
+    "optionB": "A candle",
+    "optionC": "A tree",
+    "optionD": "A shadow",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 7,
+    "questionID": 32,
+    "questionText": "The more of this you take, the more you leave behind. What is it?",
+    "optionA": "Steps",
+    "optionB": "Time",
+    "optionC": "Memories",
+    "optionD": "Shadows",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 7,
+    "questionID": 33,
+    "questionText": "What has to be broken before you can use it?",
+    "optionA": "A code",
+    "optionB": "A promise",
+    "optionC": "An egg",
+    "optionD": "A shell",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 8,
+    "questionID": 34,
+    "questionText": "What number should come next in the sequence: 2, 4, 8, 16, ?",
+    "optionA": "18",
+    "optionB": "24",
+    "optionC": "32",
+    "optionD": "36",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 8,
+    "questionID": 35,
+    "questionText": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies?",
+    "optionA": "Cannot be determined",
+    "optionB": "No",
+    "optionC": "Only sometimes",
+    "optionD": "Yes",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 8,
+    "questionID": 36,
+    "questionText": "A clock shows 3:15. What is the angle between the hour and minute hands?",
+    "optionA": "0°",
+    "optionB": "7.5°",
+    "optionC": "15°",
+    "optionD": "30°",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 9,
+    "questionID": 37,
+    "questionText": "Which company first introduced the touchscreen smartphone as we know it today?",
+    "optionA": "Nokia",
+    "optionB": "Apple",
+    "optionC": "Motorola",
+    "optionD": "Samsung",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 9,
+    "questionID": 38,
+    "questionText": "What technology is primarily used to secure cryptocurrency transactions?",
+    "optionA": "Artificial Intelligence",
+    "optionB": "Blockchain",
+    "optionC": "Cloud Computing",
+    "optionD": "Machine Learning",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 9,
+    "questionID": 39,
+    "questionText": "Which of the following is not an example of wearable technology?",
+    "optionA": "Smartwatch",
+    "optionB": "Fitness tracker",
+    "optionC": "Augmented reality glasses",
+    "optionD": "Drone",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 9,
+    "questionID": 40,
+    "questionText": "What is the main purpose of 5G technology?",
+    "optionA": "Increase internet speed and connectivity",
+    "optionB": "Reduce electricity consumption",
+    "optionC": "Replace Wi-Fi entirely",
+    "optionD": "Improve screen resolution on devices",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 1,
+    "questionID": 41,
+    "questionText": "Who is credited with discovering penicillin in 1928?",
+    "optionA": "Marie Curie",
+    "optionB": "Alexander Fleming",
+    "optionC": "Louis Pasteur",
+    "optionD": "Thomas Edison",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 10,
+    "questionID": 42,
+    "questionText": "Which planet was discovered by William Herschel in 1781?",
+    "optionA": "Neptune",
+    "optionB": "Uranus",
+    "optionC": "Saturn",
+    "optionD": "Mercury",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 43,
+    "questionText": "Who wrote Pride and Prejudice?",
+    "optionA": "Jane Austen",
+    "optionB": "Mary Shelley",
+    "optionC": "Emily Dickinson",
+    "optionD": "Charlotte Brontë",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 11,
+    "questionID": 44,
+    "questionText": "In J.K. Rowling’s Harry Potter series, what is the name of Harry’s pet owl?",
+    "optionA": "Crookshanks",
+    "optionB": "Hedwig",
+    "optionC": "Scabbers",
+    "optionD": "Fang",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 11,
+    "questionID": 45,
+    "questionText": "Which book begins with the line, “Call me Ishmael”?",
+    "optionA": "The Great Gatsby",
+    "optionB": "1984",
+    "optionC": "To Kill a Mockingbird",
+    "optionD": "Moby-Dick",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 11,
+    "questionID": 46,
+    "questionText": "Who wrote The Catcher in the Rye?",
+    "optionA": "F. Scott Fitzgerald",
+    "optionB": "J.D. Salinger",
+    "optionC": "Ernest Hemingway",
+    "optionD": "Mark Twain",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 11,
+    "questionID": 47,
+    "questionText": "In George Orwell’s 1984, what is the name of the totalitarian regime?",
+    "optionA": "Big Brother",
+    "optionB": "The Party",
+    "optionC": "Oceania",
+    "optionD": "Ministry of Truth",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 48,
+    "questionText": "What is the meaning of the word “ubiquitous”?",
+    "optionA": "Rare",
+    "optionB": "Everywhere",
+    "optionC": "Hidden",
+    "optionD": "Confusing",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 12,
+    "questionID": 49,
+    "questionText": "Which word is a synonym for “elated”?",
+    "optionA": "Sad",
+    "optionB": "Angry",
+    "optionC": "Excited",
+    "optionD": "Confused",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 12,
+    "questionID": 50,
+    "questionText": "What does the word “benevolent” mean?",
+    "optionA": "Kind and generous",
+    "optionB": "Strict and harsh",
+    "optionC": "Intelligent",
+    "optionD": "Confused",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 1,
+    "questionID": 51,
+    "questionText": "Which of the following is considered a cardio exercise?",
+    "optionA": "Weightlifting",
+    "optionB": "Running",
+    "optionC": "Yoga",
+    "optionD": "Pilates",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 13,
+    "questionID": 52,
+    "questionText": "How many muscles does the human body have approximately?",
+    "optionA": "206",
+    "optionB": "400",
+    "optionC": "650",
+    "optionD": "850",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 13,
+    "questionID": 53,
+    "questionText": "What nutrient is most important for muscle repair after exercise?",
+    "optionA": "Carbohydrates",
+    "optionB": "Proteins",
+    "optionC": "Fats",
+    "optionD": "Vitamins",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 13,
+    "questionID": 54,
+    "questionText": "Which exercise primarily strengthens the core muscles?",
+    "optionA": "Squats",
+    "optionB": "Push-ups",
+    "optionC": "Jumping jacks",
+    "optionD": "Plank",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 13,
+    "questionID": 55,
+    "questionText": "Which vitamin is most abundant in oranges?",
+    "optionA": "Vitamin A",
+    "optionB": "Vitamin B12",
+    "optionC": "Vitamin C",
+    "optionD": "Vitamin D",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 14,
+    "questionID": 56,
+    "questionText": "Sushi originates from which country?",
+    "optionA": "China",
+    "optionB": "Japan",
+    "optionC": "Thailand",
+    "optionD": "Korea",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 14,
+    "questionID": 57,
+    "questionText": "Which of these cheeses is traditionally Italian?",
+    "optionA": "Brie",
+    "optionB": "Cheddar",
+    "optionC": "Mozzarella",
+    "optionD": "Gouda",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 14,
+    "questionID": 58,
+    "questionText": "Quinoa is classified as which type of food?",
+    "optionA": "Grain",
+    "optionB": "Fruit",
+    "optionC": "Legume",
+    "optionD": "Nut",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 14,
+    "questionID": 59,
+    "questionText": "What is the main ingredient in guacamole?",
+    "optionA": "Tomato",
+    "optionB": "Avocado",
+    "optionC": "Onion",
+    "optionD": "Pepper",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 60,
+    "questionText": "Which designer is known as the creator of the “little black dress”?",
+    "optionA": "Coco Chanel",
+    "optionB": "Donatella Versace",
+    "optionC": "Giorgio Armani",
+    "optionD": "Karl Lagerfeld",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 15,
+    "questionID": 61,
+    "questionText": "What is the term for a sleeveless jacket or vest often worn over a shirt?",
+    "optionA": "Blazer",
+    "optionB": "Waistcoat",
+    "optionC": "Trench coat",
+    "optionD": "Cardigan",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 15,
+    "questionID": 62,
+    "questionText": "Which fashion city is home to the famous fashion event, Paris Fashion Week?",
+    "optionA": "Milan",
+    "optionB": "London",
+    "optionC": "New York",
+    "optionD": "Paris",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 1,
+    "questionID": 63,
+    "questionText": "In which game do players compete in a battle royale on an island called “Fortnite Island”?",
+    "optionA": "Apex Legends",
+    "optionB": "Fortnite",
+    "optionC": "PUBG",
+    "optionD": "Call of Duty: Warzone",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 16,
+    "questionID": 64,
+    "questionText": "Which video game franchise features characters like Mario, Luigi, and Princess Peach?",
+    "optionA": "Sonic the Hedgehog",
+    "optionB": "Legend of Zelda",
+    "optionC": "Super Mario",
+    "optionD": "Donkey Kong",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 16,
+    "questionID": 65,
+    "questionText": "What is the primary goal in the game Minecraft?",
+    "optionA": "Solve puzzles",
+    "optionB": "Race cars",
+    "optionC": "Build and survive",
+    "optionD": "Defeat bosses only",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 16,
+    "questionID": 66,
+    "questionText": "In the game The Legend of Zelda, what is the name of the main hero?",
+    "optionA": "Ganondorf",
+    "optionB": "Zelda",
+    "optionC": "Navi",
+    "optionD": "Link",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 17,
+    "questionID": 67,
+    "questionText": "In the game of Monopoly, what do you collect when you pass “Go”?",
+    "optionA": "$100",
+    "optionB": "$200",
+    "optionC": "$50",
+    "optionD": "$500",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 17,
+    "questionID": 68,
+    "questionText": "In Chess, which piece can only move diagonally?",
+    "optionA": "Bishop",
+    "optionB": "Rook",
+    "optionC": "Knight",
+    "optionD": "Queen",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 17,
+    "questionID": 69,
+    "questionText": "In Scrabble, what is the highest-scoring letter?",
+    "optionA": "Q",
+    "optionB": "X",
+    "optionC": "J",
+    "optionD": "Z",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 17,
+    "questionID": 70,
+    "questionText": "In Clue (Cluedo), which of the following is not a suspect?",
+    "optionA": "Colonel Mustard",
+    "optionB": "Professor Plum",
+    "optionC": "Miss Scarlet",
+    "optionD": "Mr. Greenleaf",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 17,
+    "questionID": 71,
+    "questionText": "In Settlers of Catan, which resource is used to build roads?",
+    "optionA": "Brick",
+    "optionB": "Wheat",
+    "optionC": "Sheep",
+    "optionD": "Ore",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 18,
+    "questionID": 72,
+    "questionText": "What is the unit of electrical resistance?",
+    "optionA": "Volt",
+    "optionB": "Ampere",
+    "optionC": "Ohm",
+    "optionD": "Watt",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 18,
+    "questionID": 73,
+    "questionText": "What type of energy is stored in a stretched spring?",
+    "optionA": "Kinetic energy",
+    "optionB": "Thermal energy",
+    "optionC": "Elastic potential energy",
+    "optionD": "Chemical energy",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 18,
+    "questionID": 74,
+    "questionText": "Which particle has a negative charge?",
+    "optionA": "Electron",
+    "optionB": "Neutron",
+    "optionC": "Proton",
+    "optionD": "Photon",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 1,
+    "questionID": 75,
+    "questionText": "What is the value of 7x8?",
+    "optionA": "54",
+    "optionB": "56",
+    "optionC": "58",
+    "optionD": "64",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 19,
+    "questionID": 76,
+    "questionText": "If a rectangle has a length of 10 and a width of 5, what is its area?",
+    "optionA": "50",
+    "optionB": "25",
+    "optionC": "15",
+    "optionD": "100",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 19,
+    "questionID": 77,
+    "questionText": "What is 15% of 200?",
+    "optionA": "25",
+    "optionB": "30",
+    "optionC": "35",
+    "optionD": "40",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 19,
+    "questionID": 78,
+    "questionText": "What is the square root of 144?",
+    "optionA": "10",
+    "optionB": "11",
+    "optionC": "14",
+    "optionD": "12",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 1,
+    "questionID": 79,
+    "questionText": "Who painted the Mona Lisa?",
+    "optionA": "Vincent van Gogh",
+    "optionB": "Pablo Picasso",
+    "optionC": "Leonardo da Vinci",
+    "optionD": "Michelangelo",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 20,
+    "questionID": 80,
+    "questionText": "Which art movement is Salvador Dalí associated with?",
+    "optionA": "Impressionism",
+    "optionB": "Surrealism",
+    "optionC": "Cubism",
+    "optionD": "Baroque",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 20,
+    "questionID": 81,
+    "questionText": "What is the term for a painting done on wet plaster?",
+    "optionA": "Fresco",
+    "optionB": "Mosaic",
+    "optionC": "Watercolor",
+    "optionD": "Gouache",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 20,
+    "questionID": 82,
+    "questionText": "The famous sculpture David was created by which artist?",
+    "optionA": "Donatello",
+    "optionB": "Rodin",
+    "optionC": "Bernini",
+    "optionD": "Michelangelo",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 20,
+    "questionID": 83,
+    "questionText": "Which artist is known for cutting off part of his own ear?",
+    "optionA": "Claude Monet",
+    "optionB": "Vincent van Gogh",
+    "optionC": "Paul Cézanne",
+    "optionD": "Edgar Degas",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 84,
+    "questionText": "In which year did the Titanic sink?",
+    "optionA": "1905",
+    "optionB": "1912",
+    "optionC": "1918",
+    "optionD": "1923",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 85,
+    "questionText": "Who was the leader of the Soviet Union during World War II?",
+    "optionA": "Vladimir Lenin",
+    "optionB": "Joseph Stalin",
+    "optionC": "Nikita Khrushchev",
+    "optionD": "Leon Trotsky",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 1,
+    "questionID": 86,
+    "questionText": "The Battle of Hastings in 1066 was fought in which country?",
+    "optionA": "France",
+    "optionB": "Spain",
+    "optionC": "Germany",
+    "optionD": "England",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 1,
+    "questionID": 87,
+    "questionText": "Who wrote the Declaration of Independence?",
+    "optionA": "Benjamin Franklin",
+    "optionB": "George Washington",
+    "optionC": "Thomas Jefferson",
+    "optionD": "John Adams",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 1,
+    "questionID": 88,
+    "questionText": "Which empire was known for building the Great Wall of China?",
+    "optionA": "Mongol Empire",
+    "optionB": "Qin Dynasty",
+    "optionC": "Roman Empire",
+    "optionD": "Ottoman Empire",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 5,
+    "questionID": 89,
+    "questionText": "Which team has won the most NBA championships in history?",
+    "optionA": "Boston Celtics",
+    "optionB": "Chicago Bulls",
+    "optionC": "Los Angeles Lakers",
+    "optionD": "San Antonio Spurs",
+    "correctAnswer": "A"
+  },
+  {
+    "quizID": 5,
+    "questionID": 90,
+    "questionText": "Who won the NBA MVP award for the 2022–23 season?",
+    "optionA": "Giannis Antetokounmpo",
+    "optionB": "Joel Embiid",
+    "optionC": "Nikola Jokić",
+    "optionD": "Stephen Curry",
+    "correctAnswer": "B"
+  },
+  {
+    "quizID": 5,
+    "questionID": 91,
+    "questionText": "In basketball, how many points is a free throw worth?",
+    "optionA": "4",
+    "optionB": "2",
+    "optionC": "3",
+    "optionD": "1",
+    "correctAnswer": "D"
+  },
+  {
+    "quizID": 5,
+    "questionID": 92,
+    "questionText": "Which country won the gold medal in men’s basketball at the 2016 Olympics?",
+    "optionA": "Spain",
+    "optionB": "Argentina",
+    "optionC": "USA",
+    "optionD": "France",
+    "correctAnswer": "C"
+  },
+  {
+    "quizID": 5,
+    "questionID": 93,
+    "questionText": "Which player is famous for the \"Sky Hook\" shot?",
+    "optionA": "Michael Jordan",
+    "optionB": "LeBron James",
+    "optionC": "Shaquille O'Neal",
+    "optionD": "Kareem Abdul-Jabbar",
+    "correctAnswer": "D"
+  }
+]

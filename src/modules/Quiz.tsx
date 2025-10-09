@@ -10,6 +10,7 @@ interface quizMethods {
     getAllQuizQuestions(): quizQuestion[]
     getNextQuestionID(): number
     getNextQuizID(): number
+    getAllQuizTries(): quizTry[]
 }
 
 export class Quiz implements QuizObject, quizMethods {
@@ -84,7 +85,6 @@ export class Quiz implements QuizObject, quizMethods {
             time: 0
         };
         quizData.forEach((quiz: QuizObject) => {
-            console.log(quiz.title)
             if (name === quiz.title)
                 result = quiz
         })
@@ -102,11 +102,45 @@ export class Quiz implements QuizObject, quizMethods {
     }
 
     getNextQuestionID(): number {
-        return this.getAllQuizQuestions().length + 1
+        let result: number = -1
+        let allQuestions: quizQuestion[] = this.getAllQuizQuestions()
+        let idArray: number[] = []
+        let indexFound: boolean = false
+        let index: number = 1;
+        allQuestions.forEach((question: quizQuestion) => {
+            idArray.push(question.questionID)
+        })
+
+        while (!indexFound) {
+            if (!idArray.includes(index)) {
+                result = index;
+                indexFound = true;
+            }
+            index++;
+        }
+
+        return result
     }
 
     getNextQuizID(): number {
-        return this.getAllQuizzes().length + 1
+        let result: number = -1
+        let allQuizzes: QuizObject[] = this.getAllQuizzes()
+        let idArray: number[] = []
+        let indexFound: boolean = false
+        let index: number = 1;
+        allQuizzes.forEach((quiz: QuizObject) => {
+            idArray.push(quiz.id)
+        })
+
+        while (!indexFound) {
+            if (!idArray.includes(index)) {
+                result = index;
+                indexFound = true;
+            }
+            index++;
+        }
+
+        return result
     }
 
     getAllQuizTries(): quizTry[] {
